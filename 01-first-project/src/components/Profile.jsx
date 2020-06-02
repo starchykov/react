@@ -1,8 +1,9 @@
 import React from 'react'
+import s from './Profile.module.css'
 
 const Header = () => {
     return (
-        <div className={'mainContent'}>
+        <div className={s.mainContent}>
             <div>
                 <img
                     src="https://jssors8.azureedge.net/demos/image-slider/img/faded-monaco-scenery-evening-dark-picjumbo-com-image.jpg"
@@ -19,9 +20,12 @@ const Header = () => {
                 <div>
                     New posts
                 </div>
-                <div>Post1</div>
-                <div>Post2</div>
-                <div>Post3</div>
+
+                <div className={'posts'}>
+                    <div className={s.item}>Post1</div>
+                    <div className={s.item}>Post2</div>
+                    <div className={s.item}>Post3</div>
+                </div>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './Profile.module.css'
+import MyPosts from './MyPosts/MyPosts'
 
 const Header = () => {
     return (
@@ -14,19 +15,9 @@ const Header = () => {
                 Ava + disc
             </div>
 
-            <div>
-                My post
 
-                <div>
-                    New posts
-                </div>
+            <MyPosts/>
 
-                <div className={'posts'}>
-                    <div className={s.item}>Post1</div>
-                    <div className={s.item}>Post2</div>
-                    <div className={s.item}>Post3</div>
-                </div>
-            </div>
         </div>
     )
 };

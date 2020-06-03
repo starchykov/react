@@ -1,5 +1,33 @@
-.Dialogs {
+.dialogs {
   display: flex;
+  height: 100%;
+}
+.dialogs .dialogItem {
+  width: 25%;
+  border-right: 1px solid grey;
+}
+.dialogs .dialogItem a {
+  margin: 10px;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+.dialogs .dialogItem .active {
+  font-weight: bold;
+  font-size: 17px;
+}
+.dialogs .messages {
+  padding: 0 0 0 20px;
+  width: 100%;
+}
+.dialogs .messages .message {
+  background: #00000014;
+  margin: 20px 0;
+  padding: 10px;
+}
+.dialogs .messages .message:nth-child(odd) {
+  -ms-text-align-last: right;
+  text-align-last: right;
 }
 
 /*# sourceMappingURL=Dialogs.module.css.map */

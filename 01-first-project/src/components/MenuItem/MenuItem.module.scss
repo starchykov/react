@@ -2,6 +2,7 @@
   width: 20%;
   padding: 10px;
   background: yellowgreen;
+  height: 90%;
 
   .item {
     color: white;
@@ -13,11 +14,13 @@
       font-weight: bold;
       width: 100%;
     }
+
+    .activeLink {
+      color: black;
+      font-size: 17px;
+    }
+
   }
 
-  .active {
-    a {
-      color: black;
-    }
-  }
+
 }

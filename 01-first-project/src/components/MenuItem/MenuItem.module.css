@@ -2,6 +2,7 @@
   width: 20%;
   padding: 10px;
   background: yellowgreen;
+  height: 90%;
 }
 .menuItem .item {
   color: white;
@@ -13,8 +14,9 @@
   font-weight: bold;
   width: 100%;
 }
-.menuItem .active a {
+.menuItem .item .activeLink {
   color: black;
+  font-size: 17px;
 }
 
 /*# sourceMappingURL=MenuItem.module.css.map */

@@ -1,0 +1,11 @@
+.profileInfo {
+  text-transform: uppercase;
+}
+.profileInfo img {
+  width: 100%;
+}
+.profileInfo .descriptionBlock {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=ProfileInfo.module.css.map */

@@ -4,16 +4,24 @@
 
 body {
   background: linear-gradient(318.32deg, #C3D1E4 0%, #DDE7F3 55%, #D4E0ED 100%);
+  overflow-y: hidden;
 }
 body .app-wrapper {
   width: 1200px;
-  margin: 50px auto;
+  margin: 0 auto;
+  padding: 50px;
   display: flex;
   flex-wrap: wrap;
+  height: 100vh;
 }
 body .app-wrapper .app-wrapper-content {
   width: 80%;
   padding: 0 0 0 10px;
+  height: 90%;
+  overflow-y: scroll;
+}
+body .app-wrapper .app-wrapper-content::-webkit-scrollbar {
+  width: 0;
 }
 
 /*# sourceMappingURL=App.css.map */

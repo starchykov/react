@@ -5,23 +5,23 @@ const MenuItem = () => {
     return (
         <nav className={s.menuItem}>
             <div className={s.item}>
-                <a href={'#'}>Profile</a>
+                <a href={'/profile'}>Profile</a>
             </div>
 
             <div className={`${s.item} ${s.active}`}>
-                <a href={'#'}>Message</a>
+                <a href={'/dialogs'}>Message</a>
             </div>
 
             <div className={s.item}>
-                <a href={'#'}>News</a>
+                <a href={'/news'}>News</a>
             </div>
 
             <div className={s.item}>
-                <a href={'#'}>Music</a>
+                <a href={'/music'}>Music</a>
             </div>
 
             <div className={s.item}>
-                <a href={'#'}>Setting</a>
+                <a href={'/setting'}>Setting</a>
             </div>
 
         </nav>

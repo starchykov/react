@@ -2,6 +2,7 @@
   color: black;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0 0 10px 0;
   background: #00000014;
 
@@ -12,4 +13,6 @@
     border: 2px solid yellowgreen;
     margin: 5px;
   }
+
+  
 }

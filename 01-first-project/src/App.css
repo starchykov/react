@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(318.32deg, #C3D1E4 0%, #DDE7F3 55%, #D4E0ED 100%);
+}
+body .app-wrapper {
+  width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+body .app-wrapper .app-wrapper-content {
+  width: 80%;
+  padding: 0 0 0 10px;
+}
+
+/*# sourceMappingURL=App.css.map */

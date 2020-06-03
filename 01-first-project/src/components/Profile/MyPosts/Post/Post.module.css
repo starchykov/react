@@ -1,0 +1,16 @@
+.Post {
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 10px 0;
+  background: #00000014;
+}
+.Post img {
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid yellowgreen;
+  margin: 5px;
+}
+
+/*# sourceMappingURL=Post.module.css.map */

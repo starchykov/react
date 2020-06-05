@@ -6,7 +6,7 @@ const Like = (props) => {
         <div className={s.Like}>
             <span>
                 ❤
-                {props.value}
+                {props.likesCount}
              </span>
 
         </div>

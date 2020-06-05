@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import  {Route, BrowserRouter} from 'react-router-dom'
+import {Route, BrowserRouter} from 'react-router-dom'
 import Header from './components/Header/Header'
 import Profile from './components/Profile/Profile'
 import Dialogs from './components/Dialogs/Dialogs'
@@ -10,8 +10,10 @@ import Music from './components/Music/Music'
 import Setting from './components/Setting/Setting'
 
 
+const App = (props) => {
 
-const App = () => {
+    let ProfileItem = () => <Profile posts={props.posts}/>;
+
     return (
 
         <BrowserRouter>
@@ -20,18 +22,17 @@ const App = () => {
                 <Header/>
                 <MenuItem/>
                 <div className={'app-wrapper-content'}>
-
-                    <Route path={'/profile'} component={Profile}/>
-                    <Route path={'/dialogs'} component={Dialogs}/>
-                    <Route path={'/news'} component={News}/>
-                    <Route path={'/music'} component={Music}/>
-                    <Route path={'/setting'} component={Setting}/>
+                    <Route path={'/profile'} component={ProfileItem}/>
+                    <Route path={'/dialogs'} render={() => <Dialogs dialogs={props.dialogs}  messages={props.messages}/>}/>
+                    <Route path={'/news'} render={() => <News/>}/>
+                    <Route path={'/music'} render={() => <Music/>}/>
+                    <Route path={'/setting'} render={() => <Setting/>}/>
 
                 </div>
 
             </div>
         </BrowserRouter>
-        
+
     );
 };
 

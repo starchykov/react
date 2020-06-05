@@ -5,35 +5,11 @@
   .dialogItem {
     width: 25%;
     border-right: 1px solid grey;
-
-    a {
-      margin: 10px;
-      display: block;
-      text-decoration: none;
-      color: black;
-    }
-
-    .active {
-      font-weight: bold;
-      font-size: 17px;
-    }
-
   }
 
   .messages {
     padding: 0 0 0 20px;
     width: 100%;
-
-    .message {
-      background: #00000014;
-      margin: 20px 0;
-      padding: 10px;
-
-      &:nth-child(odd) {
-        -ms-text-align-last: right;
-        text-align-last: right;
-      }
-    }
   }
 
 }

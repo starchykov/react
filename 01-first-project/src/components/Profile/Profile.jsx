@@ -4,16 +4,19 @@ import MyPosts from './MyPosts/MyPosts'
 import ProfileInfo from './ProfileInfo/ProfileInfo'
 
 
-const Header = () => {
+
+
+const Profile = (props) => {
+
     return (
         <div className={s.mainContent}>
 
             <ProfileInfo/>
 
-            <MyPosts/>
+            <MyPosts posts={props.posts}/>
 
         </div>
     )
 };
 
-export default Header;
+export default Profile;

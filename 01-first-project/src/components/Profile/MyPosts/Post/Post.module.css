@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   margin: 0 0 10px 0;
   background: #00000014;
+  width: 100%;
 }
 .Post img {
   width: 50px;

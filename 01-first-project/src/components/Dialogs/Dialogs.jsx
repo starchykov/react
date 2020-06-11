@@ -4,11 +4,10 @@ import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
 
 let Dialogs = (props) => {
-
-    let dialogsElement = props.messagesPage.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>
+    let dialogsElement = props.messagesPage.dialogs.map(d => <DialogItem key={d.id} name={d.name} id={d.id}/>
     );
 
-    let messagesElement = props.messagesPage.messages.map((m) => <Message message={m.text} id={m.id}
+    let messagesElement = props.messagesPage.messages.map((m) => <Message key={m.id} message={m.text} id={m.id}
                                                                           likesCount={m.likesCount}/>
     );
 
@@ -44,7 +43,7 @@ let Dialogs = (props) => {
                 </div>
 
                 <div>
-                    <textarea onChange={onChangeMessage} ref={newMessageEl} value={props.newMessageText}/>
+                    <textarea onChange={onChangeMessage} ref={newMessageEl} value={newMessageText}/>
                 </div>
 
                 <div>

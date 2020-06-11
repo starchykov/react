@@ -19,10 +19,12 @@ const profileReducer = (state = initialState, action) => {
 
         //тип события
         case UPDATE_NEW_POST_TEXT:
+            //созадет копию стейта для фиксации изминений, получает из события елемент и присваивает
+            return {
+                ...state,
+                newPostText: action.newText
+            };
 
-            //получает из колбека новый стейт и событие
-            state.newPostText = action.newText;
-            return state;
 
         //тип события
         case ADD_POST:
@@ -31,28 +33,17 @@ const profileReducer = (state = initialState, action) => {
                 text: state.newPostText,
                 likesCount: '0'
             };
+            //созадет копию стейта для фиксации изминений, добавляет новый елемент
+            return {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: ''
+            };
 
-            state.posts.push(newPost);
-            state.newPostText = '';
-            return state;
 
         default:
             return state
     }
-
-    // if (action.type === UPDATE_NEW_POST_TEXT) {
-    //     state.newPostText = action.newText;
-    // } else if (action.type === ADD_POST) {
-    //     let newPost = {
-    //         id: '5',
-    //         text: state.newPostText,
-    //         likesCount: '0'
-    //     };
-    //
-    //     state.posts.push(newPost);
-    //     state.newPostText = '';
-    // }
-    // return state;
 
 };
 
@@ -62,7 +53,6 @@ export const addPostActionCreator = () => {
         type: ADD_POST
     }
 };
-
 
 //создает колбекс функцию со значением события
 export const updatePostActionCreator = (text) => {

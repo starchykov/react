@@ -9,6 +9,7 @@ import Music from './components/Music/Music'
 import Setting from './components/Setting/Setting'
 import SideBar from './components/SideBar/SideBar'
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 
 const App = (props) => {
@@ -35,6 +36,9 @@ const App = (props) => {
 
                 <Route path={'/setting'}
                        render={() => <Setting/>}/>
+
+                <Route path={'/users'}
+                       render={() => <UsersContainer/>}/>
 
                 {/*<Route path={'/dialogs'}*/}
                 {/*       render={SideBarItem}/>*/}

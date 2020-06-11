@@ -26,20 +26,26 @@ let initialState = {
 const messageReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case SEND_MESSAGE:
-            let newMessage = {
-                id: '6',
-                text: state.newMessageText,
-            };
-            state.messages.push(newMessage);
-            state.newMessageText = '';
-
-            return state;
 
         case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.newMessage;
+            //созадет копию стейта для фиксации изминений, получает из события елемент и присваивает
+            return {
+                ...state,
+                newMessageText: action.newMessage
+            };
 
-            return state;
+        case SEND_MESSAGE:
+            let newMessage = {
+                id: '',
+                text: state.newMessageText,
+            };
+            //созадет копию стейта для фиксации изминений, добавляет новый елемент
+            return {
+                ...state,
+                messages: [...state.messages, newMessage],
+                newMessageText: ''
+            };
+
 
         default:
             return state

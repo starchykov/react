@@ -3,6 +3,14 @@ a {
   display: block;
   text-decoration: none;
   color: black;
+
+  img {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid yellowgreen;
+    margin: 5px;
+  }
+
 }
 
 .active {

@@ -6,8 +6,15 @@
   width: 25%;
   border-right: 1px solid grey;
 }
+.dialogs .dialogItem a {
+  display: flex;
+  align-items: center;
+}
 .dialogs .messages {
   padding: 0 0 0 20px;
+  width: 100%;
+}
+.dialogs textarea {
   width: 100%;
 }
 

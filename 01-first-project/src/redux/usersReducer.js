@@ -1,6 +1,8 @@
 const FOLLOW = 'FOLLOW-USER';
 const UNFOLLOW = 'UNFOLLOW-USER';
 const SET_USERS = 'SET-USERS';
+const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE';
+const SET_TOTAL_USERS_COUNT = 'SET-TOTAL-USERS-COUNT';
 
 //стейт возвращаемый по умолчанию при отсуцтвии изменений и наличия стейта
 let initialState = {
@@ -14,9 +16,10 @@ let initialState = {
         //     location: {country: 'Ukraine', city: 'Kyiv'}
         // }
     ],
-    pageSize: 5,
-    totalUsersCount: 0,
-    currentPage: 2,
+
+    pageSize: 100,
+    totalCount: 1,
+    currentPage: 1,
 };
 
 //реагирует на событие из колбека и принимает в себя новый стейт
@@ -55,6 +58,20 @@ const usersReducer = (state = initialState, action) => {
             }
         }
 
+        case SET_CURRENT_PAGE: {
+            return {
+                ...state,
+                currentPage: action.currentPageNum
+            }
+        }
+
+        case SET_TOTAL_USERS_COUNT: {
+            return {
+                ...state,
+                totalCount: action.count
+            }
+        }
+
         default:
             return state
     }
@@ -77,6 +94,18 @@ export const unfollowAC = (id) => {
 export const setUsersAC = (users) => {
     return {
         type: SET_USERS, users
+    }
+};
+
+export const setCurrentPageAC = (currentPageNum) => {
+    return {
+        type: SET_CURRENT_PAGE, currentPageNum
+    }
+};
+
+export const setTotalUsersCountAC = (count) => {
+    return {
+        type: SET_TOTAL_USERS_COUNT, count
     }
 };
 

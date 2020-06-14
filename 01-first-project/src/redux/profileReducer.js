@@ -1,9 +1,13 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const SET_USER_PROFILE = 'SET-PROFILE';
 
 
 //стейт возвращаемый по умолчанию при отсуцтвии изменений и наличия стейта
 let initialState = {
+
+    profile: null,
+
     posts: [
         {id: '1', text: 'Hi? how are you', likesCount: '4'},
         {id: '2', text: 'It`s my first post', likesCount: '12'},
@@ -41,6 +45,14 @@ const profileReducer = (state = initialState, action) => {
             };
 
 
+        case SET_USER_PROFILE:
+            //созадет копию стейта для фиксации изминений, получает из события елемент и присваивает
+            return {
+                ...state,
+                profile: action.profile
+            };
+
+
         default:
             return state
     }
@@ -59,6 +71,13 @@ export const updatePostActionCreator = (text) => {
     return {
         type: UPDATE_NEW_POST_TEXT,
         newText: text
+    }
+};
+
+export const setUserProfile = (profile) => {
+    return {
+        type: SET_USER_PROFILE,
+        profile: profile
     }
 };
 

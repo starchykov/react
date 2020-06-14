@@ -1,10 +1,13 @@
 import React from 'react'
 import s from './ProfileInfo.module.css'
+import Loader from "../../Common/Loader/Loader";
 
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+    if (!props.profile) {
+        return <Loader/>
+    }
     return (
-
         <div className={s.profileInfo}>
             <div>
                 <img
@@ -13,7 +16,10 @@ const ProfileInfo = () => {
             </div>
 
             <div className={s.descriptionBlock}>
-                Ava disc
+
+                <img className={s.usersLogo} src={props.profile.photos.small}/>
+                {props.profile.fullName}
+                {props.profile.aboutMe}
             </div>
         </div>
 

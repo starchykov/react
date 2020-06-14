@@ -2,31 +2,31 @@ import React from 'react'
 import './App.css'
 import {Route} from 'react-router-dom'
 import Header from './components/Header/Header'
-import Profile from './components/Profile/Profile'
 import MenuItem from './components/MenuItem/MenuItem'
 import News from './components/News/News'
 import Music from './components/Music/Music'
 import Setting from './components/Setting/Setting'
-import SideBar from './components/SideBar/SideBar'
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 
-const App = (props) => {
+const App = () => {
 
     return (
 
         <div className={'app-wrapper'}>
 
-            <Header/>
+            <HeaderContainer/>
             <MenuItem/>
 
             <div className={'app-wrapper-content'}>
-                <Route path={'/profile'}
-                       render={() => <Profile store={props.store}/>}/>
+                <Route path={'/profile/:userId?'}
+                       render={() => <ProfileContainer/>}/>
 
                 <Route path={'/dialogs'}
-                       render={() => <DialogsContainer store={props.store}/>}/>
+                       render={() => <DialogsContainer/>}/>
 
                 <Route path={'/news'}
                        render={() => <News/>}/>
@@ -45,7 +45,9 @@ const App = (props) => {
             </div>
 
         </div>
+
     );
+
 };
 
 

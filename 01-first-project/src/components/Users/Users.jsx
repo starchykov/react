@@ -1,10 +1,12 @@
 import React from 'react'
 import s from './users.module.css'
 import userPhoto from './../../assets/images/avatar.png'
+import {NavLink} from "react-router-dom";
 
 
 let Users = (props) => {
 
+    //округление общего количества страниц и пуш в спан
     let pagesCount = Math.ceil(props.totalCount / props.pageSize);
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
@@ -14,6 +16,7 @@ let Users = (props) => {
     return (
         <div>
             <div>
+                {/*спан с количеством страниц из стейта */}
                 {pages.map(p => {
                     return <span className={props.currentPage === p && s.SelectedPage}
                                  onClick={() => {
@@ -26,9 +29,13 @@ let Users = (props) => {
                 props.users.map(u => <div key={u.id} id={u.id} className={s.userCard}>
 
                     <span className={s.avatarCase}>
-                        <img src={u.photos.small
-                        != null ? u.photos.small
-                            : userPhoto} alt="" className={s.usersLogo}/>
+
+                        <NavLink to={'/profile/' + u.id}>
+                            <img src={u.photos.small
+                            != null ? u.photos.small
+                                : userPhoto} alt="" className={s.usersLogo}
+                            />
+                        </NavLink>
 
                         {u.followed
                             ? <button className={s.subBut}

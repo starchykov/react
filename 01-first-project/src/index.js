@@ -15,7 +15,7 @@ import Provider from "react-redux/es/components/Provider";
         //область навигации в приложении
         <BrowserRouter>
             <Provider store={store}>
-                <App />
+                <App/>
             </Provider>
         </BrowserRouter>,
 

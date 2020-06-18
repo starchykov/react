@@ -1,38 +1,26 @@
 import React from 'react'
 import {connect} from "react-redux/es/alternate-renderers";
 import {
-    follow,
+    follow, getUsers,
     setCurrentPage,
-    setFetchingStatus,
-    setTotalUsersCount,
-    setUsers,
+    setProgressStatus,
     unfollow
 } from "../../redux/usersReducer";
-import * as axios from "axios";
 import Users from "./Users";
 import Loader from "../Common/Loader/Loader";
+import {widthAuthRedirect} from "../../hoc/widthAuthtRedirect";
+import Dialogs from "../Dialogs/Dialogs";
 
 
-class UsersAPIComponent extends React.Component {
+class UsersContainer extends React.Component {
 
     componentDidMount(): void {
-        this.props.setFetchingStatus(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
-            .then(response => {
-                this.props.setFetchingStatus(false);
-                this.props.setUsers(response.data.items);
-                this.props.setTotalUsersCount(response.data.totalCount);
-            });
+        this.props.getUsers(this.props.currentPage, this.props.pageSize);
     };
 
-    onPageChanged = (currentPageNum) => {
-        this.props.setCurrentPage(currentPageNum);
-        this.props.setFetchingStatus(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${currentPageNum}&count=${this.props.pageSize}`)
-            .then(response => {
-                this.props.setFetchingStatus(false);
-                this.props.setUsers(response.data.items);
-            });
+    onPageChanged = (currentPage) => {
+        this.props.getUsers(currentPage, this.props.pageSize);
+        this.props.setCurrentPage(currentPage)
     };
 
 
@@ -47,7 +35,9 @@ class UsersAPIComponent extends React.Component {
                        onPageChanged={this.onPageChanged}
                        users={this.props.users}
                        follow={this.props.follow}
-                       unfollow={this.props.unfollow}/>
+                       unfollow={this.props.unfollow}
+                       inProgress={this.props.inProgress}
+                       setProgressStatus={this.props.setProgressStatus}/>
 
             </>
         )
@@ -61,7 +51,8 @@ let mapStateToProps = (state) => {
         pageSize: state.usersPage.pageSize,
         totalCount: state.usersPage.totalCount,
         currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching
+        isFetching: state.usersPage.isFetching,
+        inProgress: state.usersPage.inProgress
     }
 };
 
@@ -94,15 +85,8 @@ let mapStateToProps = (state) => {
 //     }
 // };
 
+//HOC with redirect option on autch check status
+let widthRedirect = widthAuthRedirect(UsersContainer);
 
 //в коннект вместо диспатч передаются сразу АК и вызываются на през компоненте
-const UsersContainer = connect(mapStateToProps, {
-    follow,
-    unfollow,
-    setUsers,
-    setCurrentPage,
-    setTotalUsersCount,
-    setFetchingStatus,
-})(UsersAPIComponent);
-
-export default UsersContainer;
+export default connect(mapStateToProps, {follow, unfollow, setCurrentPage, setProgressStatus, getUsers})(widthRedirect);

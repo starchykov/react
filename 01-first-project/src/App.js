@@ -1,7 +1,6 @@
 import React from 'react'
 import './App.css'
 import {Route} from 'react-router-dom'
-import Header from './components/Header/Header'
 import MenuItem from './components/MenuItem/MenuItem'
 import News from './components/News/News'
 import Music from './components/Music/Music'
@@ -10,6 +9,7 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
+import Login from "./components/Login/Login";
 
 
 const App = () => {
@@ -39,6 +39,9 @@ const App = () => {
 
                 <Route path={'/users'}
                        render={() => <UsersContainer/>}/>
+
+                <Route path={'/login'}
+                       render={() => <Login/>}/>
 
                 {/*<Route path={'/dialogs'}*/}
                 {/*       render={SideBarItem}/>*/}

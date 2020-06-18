@@ -1,10 +1,10 @@
 import React from 'react'
 import s from './Profile.module.css'
-import * as axios from "axios";
 import Profile from "./Profile";
 import {connect} from "react-redux/es/alternate-renderers";
-import {setUserProfile} from "../../redux/profileReducer";
+import {getUserProfile} from "../../redux/profileReducer";
 import withRouter from "react-router-dom/es/withRouter";
+import {widthAuthRedirect} from "../../hoc/widthAuthtRedirect";
 
 class ProfileContainer extends React.Component {
 
@@ -13,14 +13,11 @@ class ProfileContainer extends React.Component {
         if (!userId) {
             userId = 2;
         }
-
-        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`)
-            .then(response => {
-                this.props.setUserProfile(response.data);
-            });
+        this.props.getUserProfile(userId)
     };
 
     render() {
+
         return (
             <div className={s.mainContent}>
 
@@ -31,16 +28,20 @@ class ProfileContainer extends React.Component {
     }
 }
 
+let AuthRedirectComponent = widthAuthRedirect(ProfileContainer);
+
 
 let mapStateToProps = (state) => {
     return {
-        profile: state.profilePage.profile
+        profile: state.profilePage.profile,
     }
 };
 
+
+
 //создаем функцию, которая получает инфо о УРЛ и передаем в контейнерную комп
 
-let WithUrlDataContainerComponent = withRouter(ProfileContainer);
+let WithUrlDataContainerComponent = withRouter(AuthRedirectComponent);
 
 
-export default connect(mapStateToProps, {setUserProfile})(WithUrlDataContainerComponent);
+export default connect(mapStateToProps, {getUserProfile})(WithUrlDataContainerComponent);

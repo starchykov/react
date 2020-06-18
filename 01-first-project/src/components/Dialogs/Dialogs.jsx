@@ -6,25 +6,21 @@ import Message from './Message/Message'
 let Dialogs = (props) => {
     let dialogsElement = props.messagesPage.dialogs.map(d => <DialogItem key={d.id} name={d.name} id={d.id}/>
     );
-
     let messagesElement = props.messagesPage.messages.map((m) => <Message key={m.id} message={m.text} id={m.id}
                                                                           likesCount={m.likesCount}/>
     );
-
     let newMessageText = props.newMessageText;
-
     let newMessageEl = createRef();
-
     let sendMessage = () => {
         props.sendMessage();
     };
-
     //таргет параметр для он ченджа "е"
     let onChangeMessage = (e) => {
         // let newMessage = newMessageEl.current.value;
         let newMessage = e.target.value;
         props.updateMessage(newMessage)
     };
+
 
     return (
         <div className={s.dialogs}>

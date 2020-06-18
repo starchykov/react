@@ -1,3 +1,5 @@
+import {usersApi} from "../api/api";
+
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET-PROFILE';
@@ -21,7 +23,6 @@ const profileReducer = (state = initialState, action) => {
     //свитч если событие по типу "***"
     switch (action.type) {
 
-        //тип события
         case UPDATE_NEW_POST_TEXT:
             //созадет копию стейта для фиксации изминений, получает из события елемент и присваивает
             return {
@@ -29,8 +30,6 @@ const profileReducer = (state = initialState, action) => {
                 newPostText: action.newText
             };
 
-
-        //тип события
         case ADD_POST:
             let newPost = {
                 id: '5',
@@ -43,7 +42,6 @@ const profileReducer = (state = initialState, action) => {
                 posts: [...state.posts, newPost],
                 newPostText: ''
             };
-
 
         case SET_USER_PROFILE:
             //созадет копию стейта для фиксации изминений, получает из события елемент и присваивает
@@ -79,6 +77,15 @@ export const setUserProfile = (profile) => {
         type: SET_USER_PROFILE,
         profile: profile
     }
+};
+
+export const getUserProfile = (id) => (dispatch) => {
+
+    usersApi.getProfile(id)
+        .then(response => {
+            dispatch(setUserProfile(response.data));
+        });
+
 };
 
 export default profileReducer;

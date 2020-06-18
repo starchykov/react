@@ -4,6 +4,7 @@ import userPhoto from './../../assets/images/avatar.png'
 import {NavLink} from "react-router-dom";
 
 
+
 let Users = (props) => {
 
     //округление общего количества страниц и пуш в спан
@@ -18,12 +19,14 @@ let Users = (props) => {
             <div>
                 {/*спан с количеством страниц из стейта */}
                 {pages.map(p => {
+                    debugger;
                     return <span className={props.currentPage === p && s.SelectedPage}
                                  onClick={() => {
                                      props.onPageChanged(p)
                                  }}> {p} </span>
                 })}
             </div>
+
 
             {
                 props.users.map(u => <div key={u.id} id={u.id} className={s.userCard}>
@@ -38,10 +41,18 @@ let Users = (props) => {
                         </NavLink>
 
                         {u.followed
+
                             ? <button className={s.subBut}
-                                      onClick={() => props.unfollow(u.id)}>Unfollow</button>
+                                      disabled={props.inProgress.some(id => id === u.id)}
+                                      onClick={() => {
+                                          props.unfollow(u.id)
+                                      }}>Unfollow</button>
+
                             : <button className={s.subBut}
-                                      onClick={() => props.follow(u.id)}>Follow</button>}
+                                      disabled={props.inProgress.some(id => id === u.id)}
+                                      onClick={() => {
+                                          props.follow(u.id)
+                                      }}>Follow</button>}
                     </span>
 
                     <span className={s.infoCase}>

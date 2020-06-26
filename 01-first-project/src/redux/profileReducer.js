@@ -1,8 +1,9 @@
-import {usersApi} from "../api/api";
+import {profileApi, usersApi} from "../api/api";
 
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET-PROFILE';
+const SET_STATUS = 'SET-STATUS';
 
 
 //стейт возвращаемый по умолчанию при отсуцтвии изменений и наличия стейта
@@ -15,6 +16,7 @@ let initialState = {
         {id: '2', text: 'It`s my first post', likesCount: '12'},
     ],
     newPostText: 'some text',
+    status: ''
 };
 
 //реагирует на событие из колбека и принимает в себя новый стейт
@@ -50,6 +52,13 @@ const profileReducer = (state = initialState, action) => {
                 profile: action.profile
             };
 
+        case SET_STATUS:
+            //созадет копию стейта для фиксации изминений, получает из события елемент и присваивает
+            return {
+                ...state,
+                status: action.status
+            };
+
 
         default:
             return state
@@ -79,6 +88,13 @@ export const setUserProfile = (profile) => {
     }
 };
 
+export const setStatus = (status) => {
+    return {
+        type: SET_STATUS,
+        status: status
+    }
+};
+
 export const getUserProfile = (id) => (dispatch) => {
 
     usersApi.getProfile(id)
@@ -87,5 +103,26 @@ export const getUserProfile = (id) => (dispatch) => {
         });
 
 };
+
+export const getStatus = (id) => (dispatch) => {
+
+    profileApi.getStatus(id)
+        .then(response => {
+            dispatch(setStatus(response.data));
+        });
+
+};
+
+export const updateStatus = (status) => (dispatch) => {
+
+    profileApi.updateStatus(status)
+        .then(response => {
+            if (response.data === 0) {
+                dispatch(setStatus(status));
+            }
+        });
+
+};
+
 
 export default profileReducer;

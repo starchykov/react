@@ -4,7 +4,6 @@ import userPhoto from './../../assets/images/avatar.png'
 import {NavLink} from "react-router-dom";
 
 
-
 let Users = (props) => {
 
     //округление общего количества страниц и пуш в спан
@@ -17,9 +16,8 @@ let Users = (props) => {
     return (
         <div>
             <div>
-                {/*спан с количеством страниц из стейта */}
+               { /*спан с количеством страниц из стейта */}
                 {pages.map(p => {
-                    debugger;
                     return <span className={props.currentPage === p && s.SelectedPage}
                                  onClick={() => {
                                      props.onPageChanged(p)
@@ -56,7 +54,7 @@ let Users = (props) => {
                     </span>
 
                     <span className={s.infoCase}>
-                            {u.name}
+                        {u.name}
                         {u.status}
                         {/*{u.location.city}*/}
                         {/*{u.location.country}*/}

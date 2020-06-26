@@ -9,7 +9,7 @@ import {
 import Users from "./Users";
 import Loader from "../Common/Loader/Loader";
 import {widthAuthRedirect} from "../../hoc/widthAuthtRedirect";
-import Dialogs from "../Dialogs/Dialogs";
+import {compose} from "redux";
 
 
 class UsersContainer extends React.Component {
@@ -38,7 +38,6 @@ class UsersContainer extends React.Component {
                        unfollow={this.props.unfollow}
                        inProgress={this.props.inProgress}
                        setProgressStatus={this.props.setProgressStatus}/>
-
             </>
         )
     }
@@ -55,6 +54,12 @@ let mapStateToProps = (state) => {
         inProgress: state.usersPage.inProgress
     }
 };
+
+
+export default compose(
+    connect(mapStateToProps, {follow, unfollow, setCurrentPage, setProgressStatus, getUsers}),
+    widthAuthRedirect
+)(UsersContainer);
 
 // let mapDispatchToProps = (dispatch) => {
 //     return {
@@ -85,8 +90,8 @@ let mapStateToProps = (state) => {
 //     }
 // };
 
-//HOC with redirect option on autch check status
-let widthRedirect = widthAuthRedirect(UsersContainer);
-
-//в коннект вместо диспатч передаются сразу АК и вызываются на през компоненте
-export default connect(mapStateToProps, {follow, unfollow, setCurrentPage, setProgressStatus, getUsers})(widthRedirect);
+// //HOC with redirect option on autch check status
+// let widthRedirect = widthAuthRedirect(UsersContainer);
+//
+// //в коннект вместо диспатч передаются сразу АК и вызываются на през компоненте
+//  connect(mapStateToProps, {follow, unfollow, setCurrentPage, setProgressStatus, getUsers})(widthRedirect);

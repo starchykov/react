@@ -3,6 +3,7 @@ import {sendMessageActionCreator, updateMessageActionCreator} from "../../redux/
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux/es/alternate-renderers";
 import {widthAuthRedirect} from "../../hoc/widthAuthtRedirect";
+import {compose} from "redux";
 
 // let DialogsContainer = (props) => {
 //
@@ -49,6 +50,11 @@ let mapDispatchToProps = (dispatch) => {
         }
     }
 };
+
+compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    widthAuthRedirect
+)(Dialogs);
 
 let AuthRedirectComponent = widthAuthRedirect(Dialogs);
 

@@ -8,7 +8,7 @@ import {compose} from "redux";
 
 class ProfileContainer extends React.Component {
 
-    componentDidMount(): void {
+    componentDidMount() {
         let userId = this.props.match.params.userId;
         if (!userId) {
             userId = 8758;
@@ -23,8 +23,8 @@ class ProfileContainer extends React.Component {
             <div className={s.mainContent}>
 
                 <Profile {...this.props} profile={this.props.profile}
-                                         status={this.props.status}
-                                         updateStatus={this.props.updateStatus}/>
+                         status={this.props.status}
+                         updateStatus={this.props.updateStatus}/>
 
             </div>
         )
@@ -39,10 +39,6 @@ let mapStateToProps = (state) => {
 };
 
 
-export default compose(
-    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus}),
-    withRouter,
-)(ProfileContainer);
+export default compose(connect(mapStateToProps, {getUserProfile, getStatus, updateStatus}), withRouter,)(ProfileContainer);
 
 
-//создаем функцию, которая получает инфо о УРЛ и передаем в контейнерную комп

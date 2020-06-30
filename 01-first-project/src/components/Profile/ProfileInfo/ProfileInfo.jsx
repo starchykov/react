@@ -9,6 +9,7 @@ const ProfileInfo = (props) => {
     if (!props.profile) {
         return <Loader/>
     }
+
     return (
         <div className={s.profileInfo}>
             <div>

@@ -1,5 +1,5 @@
 const SEND_MESSAGE = 'SEND-MESSAGE';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+// const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
 let initialState = {
     dialogs: [
@@ -18,32 +18,29 @@ let initialState = {
         {id: '4', text: 'Ana'},
         {id: '5', text: 'Sergei'},
         {id: '6', text: 'Julia'},
-    ],
-
-    newMessageText: 'some text',
+    ]
 };
 
 const messageReducer = (state = initialState, action) => {
 
     switch (action.type) {
 
-        case UPDATE_NEW_MESSAGE_TEXT:
-            //созадет копию стейта для фиксации изминений, получает из события елемент и присваивает
-            return {
-                ...state,
-                newMessageText: action.newMessage
-            };
+        // case UPDATE_NEW_MESSAGE_TEXT:
+        //     //созадет копию стейта для фиксации изминений, получает из события елемент и присваивает
+        //     return {
+        //         ...state,
+        //         newMessageBody: action.newMessage
+        //     };
 
         case SEND_MESSAGE:
             let newMessage = {
                 id: '',
-                text: state.newMessageText,
+                text: action.newMessageBody,
             };
             //созадет копию стейта для фиксации изминений, добавляет новый елемент
             return {
                 ...state,
                 messages: [...state.messages, newMessage],
-                newMessageText: ''
             };
 
 
@@ -68,17 +65,18 @@ const messageReducer = (state = initialState, action) => {
 
 };
 
-export const sendMessageActionCreator = () => {
+export const sendMessageActionCreator = (newMessageBody) => {
     return {
-        type: SEND_MESSAGE
+        type: SEND_MESSAGE,
+        newMessageBody
     }
 };
 
-export const updateMessageActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_MESSAGE_TEXT,
-        newMessage: text
-    }
-};
+// export const updateMessageActionCreator = (text) => {
+//     return {
+//         type: UPDATE_NEW_MESSAGE_TEXT,
+//         newMessage: text
+//     }
+// };
 
 export default messageReducer

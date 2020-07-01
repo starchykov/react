@@ -42,12 +42,12 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        sendMessage: () => {
-            dispatch(sendMessageActionCreator())
+        sendMessage: (newMessageBody) => {
+            dispatch(sendMessageActionCreator(newMessageBody))
         },
-        updateMessage: (newMessage) => {
-            dispatch(updateMessageActionCreator(newMessage))
-        }
+        // updateMessage: (newMessage) => {
+        //     dispatch(updateMessageActionCreator(newMessage))
+        // }
     }
 };
 

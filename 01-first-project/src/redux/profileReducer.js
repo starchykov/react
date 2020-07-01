@@ -1,7 +1,7 @@
 import {profileApi, usersApi} from "../api/api";
 
 const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+// const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET-PROFILE';
 const SET_STATUS = 'SET-STATUS';
 
@@ -15,7 +15,6 @@ let initialState = {
         {id: '1', text: 'Hi? how are you', likesCount: '4'},
         {id: '2', text: 'It`s my first post', likesCount: '12'},
     ],
-    newPostText: 'some text',
     status: ''
 };
 
@@ -25,17 +24,17 @@ const profileReducer = (state = initialState, action) => {
     //свитч если событие по типу "***"
     switch (action.type) {
 
-        case UPDATE_NEW_POST_TEXT:
-            //созадет копию стейта для фиксации изминений, получает из события елемент и присваивает
-            return {
-                ...state,
-                newPostText: action.newText
-            };
+        // case UPDATE_NEW_POST_TEXT:
+        //     //созадет копию стейта для фиксации изминений, получает из события елемент и присваивает
+        //     return {
+        //         ...state,
+        //         newPostText: action.newText
+        //     };
 
         case ADD_POST:
             let newPost = {
                 id: '5',
-                text: state.newPostText,
+                text: action.newPostText,
                 likesCount: '0'
             };
             //созадет копию стейта для фиксации изминений, добавляет новый елемент
@@ -67,19 +66,20 @@ const profileReducer = (state = initialState, action) => {
 };
 
 //создает колбекс функцию со значением события
-export const addPostActionCreator = () => {
+export const addPostActionCreator = (newPostText) => {
     return {
-        type: ADD_POST
+        type: ADD_POST,
+        newPostText
     }
 };
 
 //создает колбекс функцию со значением события
-export const updatePostActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_POST_TEXT,
-        newText: text
-    }
-};
+// export const updatePostActionCreator = (text) => {
+//     return {
+//         type: UPDATE_NEW_POST_TEXT,
+//         newText: text
+//     }
+// };
 
 export const setUserProfile = (profile) => {
     return {

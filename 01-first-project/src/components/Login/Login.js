@@ -11,6 +11,7 @@ const maxLength20 = maxLengthCreator(20);
 const LoginForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
+            {props.error && <div> {props.error}</div>}
             <div>
                 <Field placeholder={'Email'} name={'email'} component={Input} validate={[required, maxLength20]}/>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from "react-redux/es/alternate-renderers";
 import {
-    follow, getUsers,
+    follow, requestUsers,
     setCurrentPage,
     setProgressStatus,
     unfollow
@@ -10,6 +10,7 @@ import Users from "./Users";
 import Loader from "../Common/Loader/Loader";
 import {widthAuthRedirect} from "../../hoc/widthAuthtRedirect";
 import {compose} from "redux";
+import {getUsers, getCurrentPage, getInProgress, getIsFetching, getPageSize, getTotalCount} from "../../redux/usersSelector";
 
 
 class UsersContainer extends React.Component {
@@ -44,21 +45,31 @@ class UsersContainer extends React.Component {
 
 }
 
+// let mapStateToProps = (state) => {
+//     return {
+//         users: state.usersPage.users,
+//         pageSize: state.usersPage.pageSize,
+//         totalCount: state.usersPage.totalCount,
+//         currentPage: state.usersPage.currentPage,
+//         isFetching: state.usersPage.isFetching,
+//         inProgress: state.usersPage.inProgress
+//     }
+// };
+
 let mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalCount: state.usersPage.totalCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        inProgress: state.usersPage.inProgress
+        users: getUsers(state),
+        pageSize: getPageSize(state),
+        totalCount: getTotalCount(state),
+        currentPage: getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        inProgress: getInProgress(state)
     }
 };
 
 
 export default compose(
-    connect(mapStateToProps, {follow, unfollow, setCurrentPage, setProgressStatus, getUsers}),
-    widthAuthRedirect
+    connect(mapStateToProps, {follow, unfollow, setCurrentPage, setProgressStatus, getUsers: requestUsers}), widthAuthRedirect
 )(UsersContainer);
 
 // let mapDispatchToProps = (dispatch) => {
@@ -94,4 +105,4 @@ export default compose(
 // let widthRedirect = widthAuthRedirect(UsersContainer);
 //
 // //в коннект вместо диспатч передаются сразу АК и вызываются на през компоненте
-//  connect(mapStateToProps, {follow, unfollow, setCurrentPage, setProgressStatus, getUsers})(widthRedirect);
+//  connect(mapStateToProps, {follow, unfollow, setCurrentPage, setProgressStatus, requestUsers})(widthRedirect);

@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './App.css'
-import {Route} from 'react-router-dom'
+import {Route, withRouter} from 'react-router-dom'
 import MenuItem from './components/MenuItem/MenuItem'
 import News from './components/News/News'
 import Music from './components/Music/Music'
@@ -10,48 +10,68 @@ import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
+import {connect} from "react-redux";
+import {compose} from "redux";
+import {initializeApp} from "./redux/AppReducer";
+import Loader from "./components/Common/Loader/Loader";
 
 
-const App = () => {
+class App extends Component {
 
-    return (
+    componentDidMount(): void {
+        this.props.initializeApp();
+    }
 
-        <div className={'app-wrapper'}>
+    render() {
+        if (!this.props.initialized) {
+            return <Loader/>
+        }
+        return (
+            <div>
 
-            <HeaderContainer/>
-            <MenuItem/>
+                <HeaderContainer/>
 
-            <div className={'app-wrapper-content'}>
-                <Route path={'/profile/:userId?'}
-                       render={() => <ProfileContainer/>}/>
+                <div className={'app-wrapper'}>
+                    <MenuItem/>
 
-                <Route path={'/dialogs'}
-                       render={() => <DialogsContainer/>}/>
+                    <div className={'app-wrapper-content'}>
+                        <Route path={'/profile/:userId?'}
+                               render={() => <ProfileContainer/>}/>
 
-                <Route path={'/news'}
-                       render={() => <News/>}/>
+                        <Route path={'/dialogs'}
+                               render={() => <DialogsContainer/>}/>
 
-                <Route path={'/music'}
-                       render={() => <Music/>}/>
+                        <Route path={'/news'}
+                               render={() => <News/>}/>
 
-                <Route path={'/setting'}
-                       render={() => <Setting/>}/>
+                        <Route path={'/music'}
+                               render={() => <Music/>}/>
 
-                <Route path={'/users'}
-                       render={() => <UsersContainer/>}/>
+                        <Route path={'/setting'}
+                               render={() => <Setting/>}/>
 
-                <Route path={'/login'}
-                       render={() => <Login/>}/>
+                        <Route path={'/users'}
+                               render={() => <UsersContainer/>}/>
 
-                {/*<Route path={'/dialogs'}*/}
-                {/*       render={SideBarItem}/>*/}
+                        <Route path={'/login'}
+                               render={() => <Login/>}/>
+
+                        {/*<Route path={'/dialogs'}*/}
+                        {/*       render={SideBarItem}/>*/}
+                    </div>
+                </div>
+
             </div>
+        );
 
-        </div>
+    }
+}
 
-    );
+const mapStateToProps = (state) => ({
+    initialized: state.app.initialized
+});
 
-};
 
-
-export default App;
+export default compose(
+    withRouter,
+    connect(mapStateToProps, {initializeApp}))(App);

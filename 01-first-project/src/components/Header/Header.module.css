@@ -1,11 +1,17 @@
 header {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   width: 100%;
   padding: 10px;
   background: yellowgreen;
-  margin: 0 0 10px 0;
   height: max-content;
+}
+header .contentWrapper {
+  width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header img {
   height: 50px;

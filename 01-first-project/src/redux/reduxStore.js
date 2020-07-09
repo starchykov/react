@@ -6,6 +6,7 @@ import sideBarReducer from "./sideBarReducer";
 import usersReducer from "./usersReducer";
 import authorization from "./auth";
 import {reducer as formReducer} from 'redux-form';
+import AppReducer from "./AppReducer";
 
 
 //склейка всех обработчиков стора
@@ -15,7 +16,8 @@ let reducers = combineReducers({
     sideBar: sideBarReducer,
     usersPage: usersReducer,
     auth: authorization,
-    form: formReducer
+    form: formReducer,
+    app: AppReducer,
 });
 
 //присвоение всех обработчиков и состояний переменной

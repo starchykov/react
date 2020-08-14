@@ -1,0 +1,45 @@
+.post {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 20px 0;
+}
+.post .postAvatar {
+  width: 10%;
+}
+.post .postAvatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+.post .postBody {
+  width: 90%;
+  padding: 0 0 0 10px;
+}
+.post .postBody .postUserName {
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.post .postBody .postUserName .date {
+  font-weight: normal;
+  color: #566471;
+}
+.post .postBody .postText {
+  width: 100%;
+}
+.post .postBody .like {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.post .postBody .like svg {
+  fill: red;
+  width: 20px;
+}
+.post .postBody .like .likeCount {
+  margin: 0 0 0 5px;
+}
+
+/*# sourceMappingURL=Post.module.css.map */

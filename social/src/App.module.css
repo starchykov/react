@@ -1,0 +1,19 @@
+body {
+  background: #15202b;
+  color: white;
+  height: 100vh;
+}
+body * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body .appWrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/*# sourceMappingURL=App.module.css.map */

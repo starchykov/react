@@ -1,3 +1,28 @@
-
+.dialogs {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dialogs .dialogsItems {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  border: 1px solid;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: #38444d;
+  border-top-color: transparent;
+}
+.dialogs .messages {
+  padding: 10px;
+  width: 80%;
+}
+.dialogs .inputBlock {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  padding: 10px;
+}
 
 /*# sourceMappingURL=Dialogs.module.css.map */

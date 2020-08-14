@@ -9,5 +9,12 @@
     font-size: 18px;
     font-weight: bold;
     margin: 15px 0;
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+
+  .active {
+    color: #1da1f2;
   }
 }

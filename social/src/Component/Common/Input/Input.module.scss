@@ -1,0 +1,26 @@
+.inputBlock {
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    height: 30px;
+    width: 80%;
+    display: flex;
+    border-radius: 16px;
+    outline: none;
+    background: #253341;
+    border: 1px transparent;
+    padding: 0 15px 0 15px;
+    color: white;
+  }
+
+  button {
+    width: 17%;
+    height: 30px;
+    border: #1da1f2;
+    background: #1da1f2;
+    outline: none;
+    color: white;
+    border-radius: 16px;
+  }
+}

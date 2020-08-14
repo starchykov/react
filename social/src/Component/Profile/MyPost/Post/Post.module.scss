@@ -1,0 +1,52 @@
+.post {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 20px 0;
+
+  .postAvatar {
+    width: 10%;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .postBody {
+    width: 90%;
+    padding: 0 0 0 10px;
+
+    .postUserName {
+      width: 100%;
+      margin-bottom: 10px;
+      font-weight: bold;
+
+      .date {
+        font-weight: normal;
+        color: #566471;
+      }
+    }
+
+    .postText {
+      width: 100%;
+    }
+
+    .like {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      svg {
+        fill: red;
+        width: 20px;
+      }
+
+      .likeCount {
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+}

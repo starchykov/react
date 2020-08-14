@@ -1,0 +1,13 @@
+.menu {
+  width: 20% ;
+  padding: 10px;
+  align-self: flex-start;
+  height: 100%;
+
+  .menuItem {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+}

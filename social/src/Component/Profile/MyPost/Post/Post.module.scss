@@ -40,8 +40,15 @@
       margin-top: 10px;
 
       svg {
-        fill: red;
         width: 20px;
+      }
+
+      .red {
+        fill: red;
+      }
+
+      .grey {
+        fill: grey;
       }
 
       .likeCount {

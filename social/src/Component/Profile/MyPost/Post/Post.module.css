@@ -35,8 +35,13 @@
   margin-top: 10px;
 }
 .post .postBody .like svg {
-  fill: red;
   width: 20px;
+}
+.post .postBody .like .red {
+  fill: red;
+}
+.post .postBody .like .grey {
+  fill: grey;
 }
 .post .postBody .like .likeCount {
   margin: 0 0 0 5px;

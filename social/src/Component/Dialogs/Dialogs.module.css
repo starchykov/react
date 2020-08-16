@@ -16,6 +16,27 @@
 .dialogs .messages {
   padding: 10px;
   width: 80%;
+  padding-top: 70px;
+  position: absolute;
+  overflow-y: scroll;
+  height: 100%;
+  left: 20%;
+  bottom: 70px;
+}
+.dialogs .messages::-webkit-scrollbar-track {
+  background-color: transparent;
+  width: 0;
+  position: absolute;
+}
+.dialogs .messages::-webkit-scrollbar {
+  background-color: transparent;
+  width: 4px;
+  position: absolute;
+}
+.dialogs .messages::-webkit-scrollbar-thumb {
+  position: absolute;
+  background-color: #253341;
+  border-radius: 17px;
 }
 .dialogs .inputBlock {
   width: 80%;

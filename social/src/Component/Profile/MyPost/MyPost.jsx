@@ -2,34 +2,32 @@ import React from 'react'
 import s from './MyPost.module.css'
 import Post from "./Post/Post";
 import Input from "../../Common/Input/Input";
+import {addPostActionCreator, onPostChangeActionCreator} from "../../redux/state";
 
-const MyPost = () => {
+const MyPost = (props) => {
+
+    let postElement = props.posts.postData.map((el) => {
+        return <Post name={el.name} text={el.text} likeCount={el.likeCount}/>
+    });
+    let newPostText = React.createRef();
+
+
+    let addPost = () => {
+        props.dispatch(addPostActionCreator())
+    };
+
+    let onPostChange = () => {
+        let text = newPostText.current.value;
+        props.dispatch(onPostChangeActionCreator(text))
+    };
+
     return (
         <div className={s.myPost}>
-
-            <Input/>
-
-            <Post name='Ivan Starchykov'
-                  text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem deserunt dolorem doloribus suscipit? Alias aut, cum deserunt doloremque excepturi hic ipsa ipsum minus modi nihil, praesentium suscipit temporibus, voluptas.'}
-                  likeCount={'12'}/>
-
-            <Post name='Ivan Starchykov'
-                  text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem deserunt dolorem doloribus suscipit? Alias aut, cum deserunt doloremque excepturi hic ipsa ipsum minus modi nihil, praesentium suscipit temporibus, voluptas.'}
-                  likeCount={'12'}/>
-
-            <Post name='Ivan Starchykov'
-                  text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem deserunt dolorem doloribus suscipit? Alias aut, cum deserunt doloremque excepturi hic ipsa ipsum minus modi nihil, praesentium suscipit temporibus, voluptas.'}
-                  likeCount={'12'}/>
-
-            <Post name='Ivan Starchykov'
-                  text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem deserunt dolorem doloribus suscipit? Alias aut, cum deserunt doloremque excepturi hic ipsa ipsum minus modi nihil, praesentium suscipit temporibus, voluptas.'}
-                  likeCount={'12'}/>
-
-            <Post name='Ivan Starchykov'
-                  text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem deserunt dolorem doloribus suscipit? Alias aut, cum deserunt doloremque excepturi hic ipsa ipsum minus modi nihil, praesentium suscipit temporibus, voluptas.'}
-                  likeCount={'12'}/>
-
-
+            <Input f={addPost}
+                   newText={newPostText}
+                   newPostText={props.posts.newPostText}
+                   onPostChange={onPostChange}/>
+            {postElement}
         </div>
     )
 };

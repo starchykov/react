@@ -5,27 +5,39 @@ import Messages from "./Messages/Messages";
 import Input from "../Common/Input/Input";
 
 const Dialogs = (props) => {
+
+    let dialogElement = props.dialogs.dialogsData.map((el) => {
+        return <DialogItems name={el.name} url={el.url} id={el.id}/>
+    });
+
+    let messagesElement = props.messages.messagesData.map((el) => {
+        return <Messages message={el.text}/>;
+    });
+
+    let newMessageText = React.createRef();
+
+
+
+    let addMessage = () => {
+        let text = newMessageText.current.value;
+        window.alert(text)
+    };
+
     return (
         <div className={s.dialogs}>
 
             <div className={s.dialogsItems}>
-                <DialogItems name={'Ivan'}
-                             url={'https://pbs.twimg.com/profile_images/1080468018147328000/qbyMyWCs_200x200.jpg'}/>
-                <DialogItems name={'Ivan'}
-                             url={'https://pbs.twimg.com/profile_images/1080468018147328000/qbyMyWCs_200x200.jpg'}/>
-                <DialogItems name={'Ivan'}
-                             url={'https://pbs.twimg.com/profile_images/1080468018147328000/qbyMyWCs_200x200.jpg'}/>
-                <DialogItems name={'Ivan'}
-                             url={'https://pbs.twimg.com/profile_images/1080468018147328000/qbyMyWCs_200x200.jpg'}/>
+                {dialogElement}
             </div>
 
-            <div className={s.messages}>
-                <Messages message={'Hello'}/>
+            <div className={s.messages} id={'messages'}>
+                {messagesElement}
             </div>
 
             <div className={s.inputBlock}>
 
-                <Input/>
+                <Input f={addMessage} newText={newMessageText}/>
+
             </div>
 
 

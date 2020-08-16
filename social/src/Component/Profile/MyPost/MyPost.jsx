@@ -24,9 +24,9 @@ const MyPost = (props) => {
     return (
         <div className={s.myPost}>
             <Input f={addPost}
-                   newText={newPostText}
-                   newPostText={props.posts.newPostText}
-                   onPostChange={onPostChange}/>
+                   newTextRef={newPostText}
+                   newText={props.posts.newPostText}
+                   onChange={onPostChange}/>
             {postElement}
         </div>
     )

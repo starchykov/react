@@ -1,5 +1,7 @@
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE';
 
 let store = {
 
@@ -21,7 +23,6 @@ let store = {
         },
 
         messagesPage: {
-
             dialogsData: [
                 {
                     name: 'Ivan',
@@ -49,7 +50,6 @@ let store = {
                     id: '5'
                 }
             ],
-
             messagesData: [
                 {id: '0', text: 'Hello'},
                 {id: '1', text: 'Haw are you'},
@@ -58,13 +58,8 @@ let store = {
                 {id: '4', text: 'I`m fine to, thanks '},
                 {id: '4', text: 'I`m fine to, thanks '},
                 {id: '4', text: 'I`m fine to, thanks '},
-                {id: '4', text: 'I`m fine to, thanks '},
-                {id: '4', text: 'I`m fine to, thanks '},
-                {id: '4', text: 'I`m fine to, thanks '},
-                {id: '4', text: 'I`m fine to, thanks '},
-                {id: '4', text: 'I`m fine to, thanks '},
-                {id: '4', text: 'I`m fine to, thanks '},
-            ]
+            ],
+            newMessageText: ''
         }
     },
 
@@ -83,7 +78,6 @@ let store = {
             text: this.state.profilePage.newPostText,
             likeCount: '6'
         };
-
         this.state.profilePage.postData.push(newPost);
         this.state.profilePage.newPostText = '';
         this.rerenderEntireTree(this.state);
@@ -91,6 +85,23 @@ let store = {
 
     updateNewPostText(newText) {
         this.state.profilePage.newPostText = newText;
+        this.rerenderEntireTree(this.state);
+    },
+
+    addMessage() {
+
+        let newMessage = {
+            id: '1',
+            text: this.state.messagesPage.newMessageText,
+        };
+
+        this.state.messagesPage.messagesData.push(newMessage);
+        this.state.messagesPage.newMessageText = '';
+        this.rerenderEntireTree(this.state);
+    },
+
+    updateNewMessageText(newText) {
+        this.state.messagesPage.newMessageText = newText;
         this.rerenderEntireTree(this.state);
     },
 
@@ -104,6 +115,10 @@ let store = {
             this.addPost()
         } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this.updateNewPostText(action.newText)
+        } else if (action.type === ADD_MESSAGE) {
+            this.addMessage(action.newText)
+        } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+            this.updateNewMessageText(action.newText)
         }
     }
 };
@@ -112,12 +127,25 @@ export let addPostActionCreator = () => {
     return {
         type: ADD_POST
     }
-
 };
 
 export let onPostChangeActionCreator = (text) => {
     return {
         type: UPDATE_NEW_POST_TEXT,
+        newText: text
+    }
+};
+
+
+export let addMessageActionCreator = () => {
+    return {
+        type: ADD_MESSAGE
+    }
+};
+
+export let onMessageChangeActionCreator = (text) => {
+    return {
+        type: UPDATE_NEW_MESSAGE_TEXT,
         newText: text
     }
 };

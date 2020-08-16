@@ -8,15 +8,10 @@ const Messages = (props) => {
 
     return (
         <div className={s.messageItem}>
-
             <div>
-
                 {props.message}
-
             </div>
-
             <span className={s.time}>{time}</span>
-
         </div>
     )
 };

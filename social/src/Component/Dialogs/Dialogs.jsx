@@ -3,6 +3,8 @@ import s from './Dialogs.module.css'
 import DialogItems from "./DialogItems/DialogItems";
 import Messages from "./Messages/Messages";
 import Input from "../Common/Input/Input";
+import {addMessageActionCreator, onMessageChangeActionCreator} from "../redux/state";
+
 
 const Dialogs = (props) => {
 
@@ -17,10 +19,13 @@ const Dialogs = (props) => {
     let newMessageText = React.createRef();
 
 
-
     let addMessage = () => {
+        props.dispatch(addMessageActionCreator());
+    };
+
+    let onMessageChange = () => {
         let text = newMessageText.current.value;
-        window.alert(text)
+        props.dispatch(onMessageChangeActionCreator(text));
     };
 
     return (
@@ -30,16 +35,18 @@ const Dialogs = (props) => {
                 {dialogElement}
             </div>
 
+
             <div className={s.messages} id={'messages'}>
                 {messagesElement}
             </div>
 
+
             <div className={s.inputBlock}>
-
-                <Input f={addMessage} newText={newMessageText}/>
-
+                <Input f={addMessage}
+                       newTextRef={newMessageText}
+                       newText={props.dialogs.newMessageText}
+                       onChange={onMessageChange}/>
             </div>
-
 
         </div>
     )

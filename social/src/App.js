@@ -6,7 +6,7 @@ import Profile from "./Component/Profile/Profile";
 import Dialogs from "./Component/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 import Content from "./Component/Content/Content";
-import {addPost} from "./Component/redux/state";
+import DialogsContainer from "./Component/Dialogs/DialogsContainer";
 
 
 const App = (props) => {
@@ -24,9 +24,9 @@ const App = (props) => {
                     <Route path={'/profile'} render={() => <Profile posts={props.state.profilePage}
                                                                     dispatch={props.store.dispatch.bind(props.store)}/>}/>
 
-                    <Route path={'/dialogs'} render={() => <Dialogs messages={props.state.messagesPage}
-                                                                    dialogs={props.state.messagesPage}
-                                                                    dispatch={props.store.dispatch.bind(props.store)}/>}/>
+                    <Route path={'/dialogs'} render={() => <DialogsContainer messages={props.state.messagesPage}
+                                                                             dialogs={props.state.messagesPage}
+                                                                             dispatch={props.store.dispatch.bind(props.store)}/>}/>
 
                 </div>
 

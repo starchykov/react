@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import store from './Component/redux/state'
+import store from './Component/redux/reduxStore'
 
-export let rerenderEntireTree = () => {
+export let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <App store={store}
-                 state={store.getState()}
+                 state={state}
                  addPost={store.addPost}
                  updateNewPostText={store.updateNewPostText}/>
         </React.StrictMode>,
@@ -18,9 +18,11 @@ export let rerenderEntireTree = () => {
 
 };
 
-
 rerenderEntireTree(store.getState());
 
-store.subscribe(rerenderEntireTree);
+store.subscribe(() => {
+    let state = store.getState();
+    rerenderEntireTree(state)
+});
 
 serviceWorker.unregister();

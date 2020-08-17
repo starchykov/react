@@ -4,7 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
-  margin: 20px 0;
+  margin: 15px 0;
+  border-bottom: 1px solid #38444d;
+  -ms-word-break: break-all;
+  word-break: break-all;
 
   .postAvatar {
     width: 10%;

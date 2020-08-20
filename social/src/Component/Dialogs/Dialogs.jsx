@@ -3,8 +3,6 @@ import s from './Dialogs.module.css'
 import DialogItems from "./DialogItems/DialogItems";
 import Messages from "./Messages/Messages";
 import Input from "../Common/Input/Input";
-import {addMessageActionCreator, onMessageChangeActionCreator} from "../redux/messageReducer";
-
 
 const Dialogs = (props) => {
 
@@ -15,7 +13,6 @@ const Dialogs = (props) => {
     let messagesElement = props.messages.messagesData.map((el) => {
         return <Messages message={el.text}/>;
     });
-
 
     return (
         <div className={s.dialogs}>

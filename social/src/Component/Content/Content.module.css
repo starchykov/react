@@ -1,0 +1,33 @@
+.content {
+  width: 20%;
+  position: absolute;
+  left: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.content .photos {
+  border-radius: 16px;
+  background: #253341;
+  height: 20%;
+  margin: 10px;
+  width: 100%;
+}
+.content .friends {
+  border-radius: 16px;
+  background: #253341;
+  height: 30%;
+  margin: 10px;
+  width: 100%;
+}
+.content .other {
+  border-radius: 16px;
+  background: #253341;
+  height: 30%;
+  margin: 10px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=Content.module.css.map */

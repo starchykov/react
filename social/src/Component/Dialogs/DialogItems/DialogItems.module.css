@@ -1,0 +1,20 @@
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  text-decoration: none;
+  color: #8393a1;
+  font-weight: 500;
+}
+.item img {
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.active {
+  color: #1da1f2;
+}
+
+/*# sourceMappingURL=DialogItems.module.css.map */

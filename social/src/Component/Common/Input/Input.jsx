@@ -7,7 +7,6 @@ const Input = (props) => {
         <div className={s.inputBlock}>
 
             <input type="text"
-                   ref={props.newTextRef}
                    onChange={props.onChange}
                    value={props.newText}/>
 

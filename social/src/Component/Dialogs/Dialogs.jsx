@@ -6,13 +6,13 @@ import Input from "../Common/Input/Input";
 
 const Dialogs = (props) => {
 
-    let dialogElement = props.dialogs.dialogsData.map((el) => {
-        return <DialogItems name={el.name} url={el.url} id={el.id}/>
-    });
+    let dialogElement = props.messagesPage.dialogsData.map((el) => <DialogItems key={el.id}
+                                                                                name={el.name}
+                                                                                url={el.url}
+                                                                                id={el.id}/>);
 
-    let messagesElement = props.messages.messagesData.map((el) => {
-        return <Messages message={el.text}/>;
-    });
+    let messagesElement = props.messagesPage.messagesData.map((el) => <Messages key={el.id}
+                                                                                message={el.text}/>);
 
     return (
         <div className={s.dialogs}>
@@ -30,7 +30,7 @@ const Dialogs = (props) => {
             <div className={s.inputBlock}>
                 <Input f={props.addMessage}
                        newTextRef={props.newMessageText}
-                       newText={props.dialogs.newMessageText}
+                       newText={props.messagesPage.newMessageText}
                        onChange={props.onMessageChange}/>
             </div>
 

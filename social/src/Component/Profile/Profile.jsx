@@ -8,7 +8,9 @@ const Profile = (props) => {
     return (
         <div className={s.profile}>
 
-            -- Ivan Starchykov
+            <span className={s.name}>
+                -- Ivan Starchykov
+            </span>
 
             <ProfileInfo/>
 

@@ -1,3 +1,27 @@
 .users {
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  svg {
+    height: 150px;
+  }
+
+  .pagesCount {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    span {
+      margin: 0 5px;
+      color: #1da1f2;
+      font-size: 18px;
+    }
+
+    .selectedPage {
+      font-weight: bold;
+    }
+  }
 }

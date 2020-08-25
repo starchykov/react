@@ -15,6 +15,7 @@ const UserItem = (props) => {
                 <div className={s.userName}>
 
                     {props.followed
+
                         ? <button className={props.followed ? s.unfollowed : s.followed}
                                   onClick={() => {
                                       props.unfollow(props.id)

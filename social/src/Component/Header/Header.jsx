@@ -1,13 +1,12 @@
 import React from 'react'
 import s from './Header.module.css'
+import Logo from "../Common/Logo/Logo";
 
 
 const Header = () => {
     return (
         <header className={s.header}>
-            <img src="https://j-older.github.io/Projects/logo.svg" alt="logo"/>
-
-
+            <Logo/>
         </header>
     )
 };

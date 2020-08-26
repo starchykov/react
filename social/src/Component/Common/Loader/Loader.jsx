@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Loader = () => {
     return <svg
                 viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">

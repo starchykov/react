@@ -13,7 +13,8 @@ const Users = (props) => {
                                                      followed={el.followed}
                                                      location={el.location === undefined ? undefined : el.location}
                                                      follow={props.followUser}
-                                                     unfollow={props.unfollowUser}/>);
+                                                     unfollow={props.unfollowUser}
+    />);
 
     let pagesCount = Math.ceil(props.totalCount / props.pageSize);
 
@@ -31,9 +32,7 @@ const Users = (props) => {
                                         onClick={() => props.onPageChange(p)}>{p}</span>)}
             </div>
 
-            <Loader/>
-
-            {userItem}
+            {props.isFetching === true ? <Loader/> : userItem}
 
         </div>
     )
@@ -41,6 +40,9 @@ const Users = (props) => {
 
 
 export default Users;
+
+
+//experimental features -->
 
 // class Users extends React.Component {
 //
@@ -99,3 +101,14 @@ export default Users;
 // }
 //
 // export default Users;
+
+// let userItem = props.users.map((el) => <UserItem key={el.id}
+//                                                  id={props.isFetching === true ? '' : el.id} // experimental
+//                                                  name={props.isFetching === true ? '' : el.name} // experimental
+//                                                  photos={props.isFetching === true ? '' : el.photos} // experimental
+//                                                  status={props.isFetching === true ? '' : (el.status === null ? undefined : el.status)} // experimental
+//                                                  followed={props.isFetching === true ? '' : el.followed} // experimental
+//                                                  location={props.isFetching === true ? '' : (el.location === undefined ? undefined : el.location)} // experimental
+//                                                  follow={props.followUser}
+//                                                  unfollow={props.unfollowUser}
+//                                                  fetching={props.isFetching}/>);

@@ -3,11 +3,13 @@ import s from './UserItem.module.css'
 
 const UserItem = (props) => {
     return (
-        <div className={s.userItem}>
+        // props.fetching === true ? s.loading : s.userItem
+            <div className={s.userItem}>
 
             <div className={s.userAvatar}>
-                <img src={props.photos.large ? props.photos.large : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'}
-                     alt="userAvatar"/>
+                <img
+                    src={props.photos.large ? props.photos.large : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'}
+                    alt="userAvatar"/>
             </div>
 
             <div className={s.userBody}>
@@ -30,11 +32,12 @@ const UserItem = (props) => {
                             <span className={s.follow}>+ Follow</span>
                         </button>}
 
-                    {props.name}
+                    <span className={s.name}>{props.name}</span>
 
                     <div className={s.location}>
                         <span className={s.city}>{props.location === undefined ? 'No city' : props.location.city}</span>
-                        <span className={s.country}>{props.location === undefined ? 'No country' : props.location.country}</span>
+                        <span
+                            className={s.country}>{props.location === undefined ? 'No country' : props.location.country}</span>
                     </div>
 
                 </div>

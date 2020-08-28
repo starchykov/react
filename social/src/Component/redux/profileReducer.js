@@ -1,8 +1,32 @@
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const ADD_POST = 'ADD-POST';
+const SET_USER_PROFILE = 'SET-USER-PROFILE';
 
 
 let initialState = {
+
+    profileData: {
+        "aboutMe": null,
+        "contacts": {
+            "facebook": null,
+            "website": null,
+            "vk": null,
+            "twitter": null,
+            "instagram": null,
+            "youtube": null,
+            "github": null,
+            "mainLink": null
+        },
+        "lookingForAJob": false,
+        "lookingForAJobDescription": null,
+        "fullName": "Older",
+        "userId": 8758,
+        "photos": {
+            "small": null,
+            "large": 'https://pbs.twimg.com/profile_images/1080468018147328000/qbyMyWCs_200x200.jpg'
+        }
+    },
+
     postData: [
         {
             id: '0',
@@ -45,6 +69,12 @@ const profileReducer = (state = initialState, action) => {
                 newPostText: action.newText
             };
 
+            case SET_USER_PROFILE:
+            return {
+                ...state,
+                profileData: action.profileData
+            };
+
 
         default:
             return state
@@ -62,6 +92,13 @@ export let onPostChangeActionCreator = (text) => {
     return {
         type: UPDATE_NEW_POST_TEXT,
         newText: text
+    }
+};
+
+export let setUserProfile = (profileData) => {
+    return {
+        type: SET_USER_PROFILE,
+        profileData: profileData
     }
 };
 

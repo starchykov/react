@@ -9,10 +9,10 @@ const Profile = (props) => {
         <div className={s.profile}>
 
             <span className={s.name}>
-                -- Ivan Starchykov
+                -- {props.profileData.fullName}
             </span>
 
-            <ProfileInfo/>
+            <ProfileInfo profileData={props.profileData}/>
 
             <MyPostContainer/>
 

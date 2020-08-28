@@ -2,11 +2,11 @@ import React from 'react';
 import s from './App.module.css'
 import Header from "./Component/Header/Header";
 import Menu from "./Component/Menu/Menu";
-import Profile from "./Component/Profile/Profile";
 import {Route} from "react-router-dom";
-import Content from "./Component/Content/Content";
 import DialogsContainer from "./Component/Dialogs/DialogsContainer";
 import UsersContainer from "./Component/Users/UsersContainer";
+import ProfileContainer from "./Component/Profile/ProfileContainer";
+import ContentContainer from "./Component/Content/ContentContainer";
 
 const App = () => {
 
@@ -15,8 +15,8 @@ const App = () => {
             <Header/>
             <Menu/>
             <div className={s.appContent}>
-                <Route path={'/profile'}
-                       render={() => <Profile/>}/>
+                <Route path={'/profile/:userId?'}
+                       render={() => <ProfileContainer/>}/>
 
                 <Route path={'/dialogs'}
                        render={() => <DialogsContainer/>}/>
@@ -24,7 +24,12 @@ const App = () => {
                 <Route path={'/friends'}
                        render={() => <UsersContainer/>}/>
             </div>
-            <Content/>
+
+            <div className={s.addContent}>
+
+            </div>
+
+            <ContentContainer/>
         </div>
     )
 };

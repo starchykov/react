@@ -1,15 +1,18 @@
 import React from 'react'
 import s from './UserItem.module.css'
+import {NavLink} from "react-router-dom";
 
 const UserItem = (props) => {
     return (
         // props.fetching === true ? s.loading : s.userItem
-            <div className={s.userItem}>
+        <div className={s.userItem}>
 
             <div className={s.userAvatar}>
-                <img
-                    src={props.photos.large ? props.photos.large : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'}
-                    alt="userAvatar"/>
+                <NavLink to={'/profile/'+props.id}>
+                    <img
+                        src={props.photos.large ? props.photos.large : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'}
+                        alt="userAvatar"/>
+                </NavLink>
             </div>
 
             <div className={s.userBody}>

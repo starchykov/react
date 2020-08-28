@@ -1,5 +1,10 @@
 .profile {
   padding: 10px;
 }
+.profile .name {
+  height: 50px;
+  display: flex;
+  padding: 10px;
+}
 
 /*# sourceMappingURL=Profile.module.css.map */

@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './ProfileInfo.module.css'
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
     return (
         <div className={s.profileInfo}>
 
@@ -10,9 +10,23 @@ const ProfileInfo = () => {
             </div>
 
             <div className={s.avatarImage}>
-                <img src='https://pbs.twimg.com/profile_images/1080468018147328000/qbyMyWCs_200x200.jpg' alt=""/>
+                <img src={props.profileData.photos.large ? props.profileData.photos.large : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'} alt=""/>
             </div>
 
+            <div className={s.name}>
+                <span>
+                    {props.profileData.fullName}
+                </span>
+            </div>
+
+            <div className={s.id}>
+                <span>
+                    @
+                </span>
+                <span>
+                    {props.profileData.userId}
+                </span>
+            </div>
 
         </div>
     )

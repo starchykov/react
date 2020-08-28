@@ -18,5 +18,13 @@
   border: 5px solid #15202b;
   border-radius: 50%;
 }
+.profileInfo .name {
+  font-weight: bold;
+  font-size: 25px;
+}
+.profileInfo .id {
+  font-weight: normal;
+  color: #566471;
+}
 
 /*# sourceMappingURL=ProfileInfo.module.css.map */

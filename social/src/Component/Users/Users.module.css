@@ -1,0 +1,36 @@
+.users {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.users svg {
+  height: 150px;
+}
+.users .pagesCount {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.users .pagesCount span {
+  margin: 0 5px;
+  color: #1da1f2;
+  font-size: 18px;
+}
+.users .pagesCount .selectedPage {
+  font-weight: bold;
+}
+.users .userItem {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 15px 0;
+  border-bottom: 1px solid #38444d;
+  -ms-word-break: break-all;
+  word-break: break-all;
+}
+
+/*# sourceMappingURL=Users.module.css.map */

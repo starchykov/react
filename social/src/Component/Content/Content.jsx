@@ -7,14 +7,18 @@ const Content = (props) => {
     return (
         <div className={s.content}>
             <div className={s.authInfo}>
-                {/*fix it !!!!!*/}
-                {(props.isAuthorized
-                    ? props.currentUser.fullName
-                    : <NavLink to={'/login'}>
-                    Login
-                </NavLink>)}
 
-                {props.currentUser.fullName}
+                {(props.authorization.isAuthorized
+                    ? <div className={s.authData}>
+                        {props.authorization.currentUser.fullName}
+                        <img className={s.authLogo}
+                             src={props.authorization.currentUser.photos.large
+                                 ? props.authorization.currentUser.photos.large
+                                 : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'}
+                             alt=""/>
+                    </div>
+                    : <NavLink to={'/login'}>Login</NavLink>)}
+
             </div>
 
             <div className={s.photos}>
@@ -32,5 +36,4 @@ const Content = (props) => {
         </div>
     )
 };
-debugger
 export default Content;

@@ -9,7 +9,27 @@ const initialState = {
     },
     isAuthorized: false,
 
-    currentUser: {}
+    currentUser: {
+        "aboutMe": null,
+        "contacts": {
+            "facebook": null,
+            "website": null,
+            "vk": null,
+            "twitter": null,
+            "instagram": null,
+            "youtube": null,
+            "github": null,
+            "mainLink": null
+        },
+        "lookingForAJob": null,
+        "lookingForAJobDescription": null,
+        "fullName": null,
+        "userId": null,
+        "photos": {
+            "small": null,
+            "large": null
+        }
+    },
 };
 
 
@@ -48,5 +68,5 @@ export let setCurrentUser = (currentUserData) => {
         currentUserData: currentUserData
     }
 };
-debugger
+
 export default authorizationReducer;

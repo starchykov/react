@@ -11,7 +11,7 @@ class ContentContainer extends React.Component {
             .then(response => {
                 this.props.setAuthorizeData(response.data);
                 axios.get('https://social-network.samuraijs.com/api/1.0/profile/' + response.data.data.id).then(response => {
-                    setCurrentUser(response.data)
+                    this.props.setCurrentUser(response.data)
                 })
             })
     }
@@ -22,8 +22,7 @@ class ContentContainer extends React.Component {
 }
 
 let mapStateToProps = (state) => ({
-    isAuthorized: state.authorization.isAuthorized,
-    currentUser: state.authorization.currentUser
+    authorization: state.authorization,
 });
 
 export default connect(mapStateToProps, {setAuthorizeData, setCurrentUser})(ContentContainer);

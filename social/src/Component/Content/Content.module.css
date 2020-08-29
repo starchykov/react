@@ -30,6 +30,16 @@
   background: #253341;
   margin-bottom: 50px;
 }
+.content .authInfo .authData {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.content .authInfo .authData .authLogo {
+  border-radius: 50%;
+  height: 45px;
+}
 .content .authInfo a {
   color: #566471;
   text-decoration: none;

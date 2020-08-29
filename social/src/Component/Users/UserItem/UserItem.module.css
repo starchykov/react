@@ -1,0 +1,65 @@
+.userItem {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 15px 0;
+  border-bottom: 1px solid #38444d;
+  -ms-word-break: break-all;
+  word-break: break-all;
+}
+.userItem .userAvatar {
+  width: 10%;
+}
+.userItem .userAvatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+.userItem .userBody {
+  width: 90%;
+  padding: 0 0 0 10px;
+}
+.userItem .userBody .userName {
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.userItem .userBody .userName .location {
+  font-weight: normal;
+  color: #566471;
+}
+.userItem .userBody .userName .location .city {
+  margin-right: 5px;
+}
+.userItem .userBody .userName button {
+  float: right;
+  width: 17%;
+  height: 30px;
+  border: #1da1f2;
+  background: #1da1f2;
+  outline: none;
+  color: white;
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+.userItem .userBody .userName button:hover span:first-of-type {
+  display: none;
+  transition: all 0.4s;
+}
+.userItem .userBody .userName button:hover span:last-of-type {
+  display: block;
+  transition: all 0.4s;
+}
+.userItem .userBody .userName .followed {
+  border: #1da1f2;
+  background: #1da1f2;
+  transition: all 0.3s;
+}
+.userItem .userBody .userName .unfollowed {
+  border: #ca2055;
+  background: #ca2055;
+  transition: all 0.3s;
+}
+
+/*# sourceMappingURL=UserItem.module.css.map */

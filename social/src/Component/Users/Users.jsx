@@ -5,15 +5,20 @@ import Loader from "../Common/Loader/Loader";
 
 const Users = (props) => {
 
-    let userItem = props.users.map((el) => <UserItem key={el.id}
+    let userItem = props.users.map((el) => <UserItem {...props}
+                                                     key={el.id}
                                                      id={el.id}
                                                      name={el.name}
                                                      photos={el.photos}
                                                      status={el.status === null ? undefined : el.status}
                                                      followed={el.followed}
                                                      location={el.location === undefined ? undefined : el.location}
-                                                     follow={props.followUser}
-                                                     unfollow={props.unfollowUser}
+                                                     // follow={props.follow}
+                                                     // unfollow={props.unfollow}
+                                                     // setActionProgress={props.setActionProgress}
+                                                     // actionProgress={props.actionProgress}
+                                                     followApi={props.followApi}
+                                                     unfollowApi={props.followApi}
     />);
 
     let pagesCount = Math.ceil(props.totalCount / props.pageSize);
@@ -28,8 +33,10 @@ const Users = (props) => {
         <div className={s.users}>
 
             <div className={s.pagesCount}>
-                {pages.map((p) => <span className={props.currentPage === p && s.selectedPage}
-                                        onClick={() => props.onPageChange(p)}>{p}</span>)}
+                {pages.map((p) =>
+                    <span className={props.currentPage === p && s.selectedPage}
+                          onClick={() => props.onPageChange(p)}>{p}
+                    </span>)}
             </div>
 
             {props.isFetching === true ? <Loader/> : userItem}

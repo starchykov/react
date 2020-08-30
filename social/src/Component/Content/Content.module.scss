@@ -33,6 +33,10 @@
     background: #253341;
     margin-bottom: 50px;
 
+    &:nth-last-of-type {
+      margin: 0;
+    }
+
     .authData {
       width: 100%;
       display: flex;
@@ -41,7 +45,7 @@
 
       .authLogo {
         border-radius: 50%;
-        height: 45px;
+        height: 35px;
       }
     }
 

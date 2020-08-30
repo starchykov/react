@@ -30,6 +30,9 @@
   background: #253341;
   margin-bottom: 50px;
 }
+.content .authInfo:nth-last-of-type {
+  margin: 0;
+}
 .content .authInfo .authData {
   width: 100%;
   display: flex;
@@ -38,7 +41,7 @@
 }
 .content .authInfo .authData .authLogo {
   border-radius: 50%;
-  height: 45px;
+  height: 35px;
 }
 .content .authInfo a {
   color: #566471;

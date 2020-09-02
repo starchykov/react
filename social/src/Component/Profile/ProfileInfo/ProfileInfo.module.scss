@@ -29,7 +29,13 @@
   }
 
   .id {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
     font-weight: normal;
     color: #566471;
+    span {
+      width: 50%;
+    }
   }
 }

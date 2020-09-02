@@ -40,18 +40,35 @@
     .authData {
       width: 100%;
       display: flex;
-      justify-content: space-evenly;
       align-items: center;
+      justify-content: space-evenly;
+
+      span {
+        margin: 0 10px;
+        font-weight: bold;
+      }
 
       .authLogo {
         border-radius: 50%;
         height: 35px;
+        margin: 0 10px;
       }
+
+      button {
+        background: none;
+        outline: none;
+        border: none;
+        color: white;
+        font-size: 25px;
+      }
+
     }
 
     a {
       color: #566471;
-      text-decoration: none;text-underline: none;
+      text-decoration: none;
+      text-underline: none;
+
       &:hover {
         color: #1da1f2;
       }
@@ -79,6 +96,5 @@
     background: #253341;
     height: 200px;
     width: 100%;
-    margin-bottom: 50px;
   }
 }

@@ -1,3 +1,5 @@
+import {AuthApi, ProfileApi} from "./api";
+
 const AUTHORIZE_ME = 'AUTHORIZE-ME';
 const SET_USER_INFO = 'SET-USER-INFO';
 
@@ -7,7 +9,7 @@ const initialState = {
         login: null,
         email: null,
     },
-    isAuthorized: false,
+    isAuthorized: null,
 
     currentUser: {
         "aboutMe": null,
@@ -67,6 +69,19 @@ export let setCurrentUser = (currentUserData) => {
         type: SET_USER_INFO,
         currentUserData: currentUserData
     }
+};
+
+export const authorize = (props) => (dispatch) => {
+    AuthApi.authMe().then(data => {
+
+        if (data.resultCode === 0) {
+            dispatch(setAuthorizeData(data));
+
+            ProfileApi.getProfile(data.data.id).then(response => {
+                dispatch(setCurrentUser(response))
+            })
+        }
+    })
 };
 
 export default authorizationReducer;

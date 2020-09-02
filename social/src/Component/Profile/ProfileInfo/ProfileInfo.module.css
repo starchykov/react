@@ -23,8 +23,14 @@
   font-size: 25px;
 }
 .profileInfo .id {
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
   font-weight: normal;
   color: #566471;
+}
+.profileInfo .id span {
+  width: 50%;
 }
 
 /*# sourceMappingURL=ProfileInfo.module.css.map */

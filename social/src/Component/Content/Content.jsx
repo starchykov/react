@@ -8,15 +8,18 @@ const Content = (props) => {
         <div className={s.content}>
             <div className={s.authInfo}>
 
-                {(props.authorization.isAuthorized
+                {(props.authorization.isAuthorized === true
                     ? <div className={s.authData}>
-                        {props.authorization.currentUser.fullName}
+                        <span>{props.authorization.currentUser.fullName}</span>
                         <img className={s.authLogo}
                              src={props.authorization.currentUser.photos.large
                                  ? props.authorization.currentUser.photos.large
                                  : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'}
                              alt=""/>
+
+                        <button>☰</button>
                     </div>
+
                     : <NavLink to={'/login'}>Login</NavLink>)}
 
             </div>
@@ -37,3 +40,12 @@ const Content = (props) => {
     )
 };
 export default Content;
+
+
+{/*<svg xmlns="http://www.w3.org/2000/svg"*/}
+{/*     width="8" */}
+{/*     height="4" */}
+{/*     viewBox="0 0 8 4">*/}
+{/*    <path fill="none" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"*/}
+{/*          d="M.8.7L4 3.3 7.2.7"></path>*/}
+{/*</svg>;*/}

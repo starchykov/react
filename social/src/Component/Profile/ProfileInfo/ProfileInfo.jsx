@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './ProfileInfo.module.css'
+import Status from './ProfileStatus'
 
 const ProfileInfo = (props) => {
     return (
@@ -10,22 +11,19 @@ const ProfileInfo = (props) => {
             </div>
 
             <div className={s.avatarImage}>
-                <img src={props.profileData.photos.large ? props.profileData.photos.large : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'} alt=""/>
+                <img src={props.profileData.photos.large
+                        ? props.profileData.photos.large
+                        : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'}
+                     alt=""/>
             </div>
 
             <div className={s.name}>
-                <span>
-                    {props.profileData.fullName}
-                </span>
+                <span>{props.profileData.fullName}</span>
             </div>
 
             <div className={s.id}>
-                <span>
-                    @
-                </span>
-                <span>
-                    {props.profileData.userId}
-                </span>
+                <span>@{props.profileData.userId}</span>
+                <span><Status status={'Hello World'}/></span>
             </div>
 
         </div>

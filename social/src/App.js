@@ -7,6 +7,7 @@ import DialogsContainer from "./Component/Dialogs/DialogsContainer";
 import UsersContainer from "./Component/Users/UsersContainer";
 import ProfileContainer from "./Component/Profile/ProfileContainer";
 import ContentContainer from "./Component/Content/ContentContainer";
+import Login from "./Component/Login/Login";
 
 const App = () => {
 
@@ -23,6 +24,9 @@ const App = () => {
 
                 <Route path={'/friends'}
                        render={() => <UsersContainer/>}/>
+
+                <Route path={'/login'}
+                       render={() => <Login/>}/>
             </div>
 
             <div className={s.addContent}>

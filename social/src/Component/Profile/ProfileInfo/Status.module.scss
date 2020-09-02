@@ -1,0 +1,22 @@
+.statusBlock {
+  width: 100%;
+
+  .status {
+    width: 100% !important;
+    display: block;
+    text-align: right;
+  }
+
+  .input {
+    input {
+      height: 30px;
+      width: 100%;
+      border-radius: 16px;
+      outline: none;
+      background: #253341;
+      border: 1px transparent;
+      padding: 0 15px 0 15px;
+      color: white;
+    }
+  }
+}

@@ -8,7 +8,7 @@ const Content = (props) => {
         <div className={s.content}>
             <div className={s.authInfo}>
 
-                {(props.authorization.isAuthorized === true
+                {(props.authorization.isAuthorized
                     ? <div className={s.authData}>
                         <span>{props.authorization.currentUser.fullName}</span>
                         <img className={s.authLogo}
@@ -17,7 +17,19 @@ const Content = (props) => {
                                  : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'}
                              alt=""/>
 
-                        <button>☰</button>
+
+                        <div className={s.menu}>
+                            <button>☰</button>
+
+                            <div className={s.menuDropdown}>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+
                     </div>
 
                     : <NavLink to={'/login'}>Login</NavLink>)}

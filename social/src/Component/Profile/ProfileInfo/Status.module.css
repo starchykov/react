@@ -1,10 +1,13 @@
 .statusBlock {
   width: 100%;
 }
-.statusBlock .status {
+.statusBlock .statusBody {
   width: 100% !important;
   display: block;
   text-align: right;
+}
+.statusBlock .statusBody .status {
+  color: white;
 }
 .statusBlock .input input {
   height: 30px;

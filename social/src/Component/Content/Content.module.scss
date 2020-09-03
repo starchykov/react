@@ -32,6 +32,9 @@
     border-radius: 16px;
     background: #253341;
     margin-bottom: 50px;
+    position: relative;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
 
     &:nth-last-of-type {
       margin: 0;
@@ -43,24 +46,68 @@
       align-items: center;
       justify-content: space-evenly;
 
+
       span {
         margin: 0 10px;
         font-weight: bold;
+        z-index: 2;
+
       }
 
       .authLogo {
         border-radius: 50%;
-        height: 35px;
+        height: 25px;
         margin: 0 10px;
+        z-index: 2;
       }
 
-      button {
-        background: none;
-        outline: none;
-        border: none;
-        color: white;
-        font-size: 25px;
+      .menu {
+        height: 100%;
+        width: 30px;
+
+        &:hover .menuDropdown{
+          display: block;
+        }
+        &:hover button {
+          opacity: 1;
+        }
+
+        button {
+          background: none;
+          outline: none;
+          border: none;
+          color: white;
+          font-size: 25px;
+          line-height: 100%;
+          position: absolute;
+          z-index: 2;
+          opacity: 50%;
+        }
+
+        .menuDropdown {
+          display: none;
+          position: absolute;
+          width: 100%;
+          border-radius: 16px;
+          top: 0;
+          height: max-content;
+          left: 0;
+          padding: 25% 10px 10px 10px;
+          background: #253341;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          z-index: 1;
+
+          &:hover {
+            display: block;
+          }
+
+          span {
+            display: block;
+          }
+        }
       }
+
+
 
     }
 
@@ -81,6 +128,8 @@
     height: 200px;
     width: 100%;
     margin-bottom: 50px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
   }
 
   .friends {
@@ -89,6 +138,8 @@
     height: 200px;
     width: 100%;
     margin-bottom: 50px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
   }
 
   .other {
@@ -96,5 +147,7 @@
     background: #253341;
     height: 200px;
     width: 100%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
   }
 }

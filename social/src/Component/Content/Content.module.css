@@ -29,6 +29,8 @@
   border-radius: 16px;
   background: #253341;
   margin-bottom: 50px;
+  position: relative;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .content .authInfo:nth-last-of-type {
   margin: 0;
@@ -42,18 +44,53 @@
 .content .authInfo .authData span {
   margin: 0 10px;
   font-weight: bold;
+  z-index: 2;
 }
 .content .authInfo .authData .authLogo {
   border-radius: 50%;
-  height: 35px;
+  height: 25px;
   margin: 0 10px;
+  z-index: 2;
 }
-.content .authInfo .authData button {
+.content .authInfo .authData .menu {
+  height: 100%;
+  width: 30px;
+}
+.content .authInfo .authData .menu:hover .menuDropdown {
+  display: block;
+}
+.content .authInfo .authData .menu:hover button {
+  opacity: 1;
+}
+.content .authInfo .authData .menu button {
   background: none;
   outline: none;
   border: none;
   color: white;
   font-size: 25px;
+  line-height: 100%;
+  position: absolute;
+  z-index: 2;
+  opacity: 50%;
+}
+.content .authInfo .authData .menu .menuDropdown {
+  display: none;
+  position: absolute;
+  width: 100%;
+  border-radius: 16px;
+  top: 0;
+  height: max-content;
+  left: 0;
+  padding: 25% 10px 10px 10px;
+  background: #253341;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  z-index: 1;
+}
+.content .authInfo .authData .menu .menuDropdown:hover {
+  display: block;
+}
+.content .authInfo .authData .menu .menuDropdown span {
+  display: block;
 }
 .content .authInfo a {
   color: #566471;
@@ -69,6 +106,7 @@
   height: 200px;
   width: 100%;
   margin-bottom: 50px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .content .friends {
   border-radius: 16px;
@@ -76,12 +114,14 @@
   height: 200px;
   width: 100%;
   margin-bottom: 50px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .content .other {
   border-radius: 16px;
   background: #253341;
   height: 200px;
   width: 100%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 /*# sourceMappingURL=Content.module.css.map */

@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './ProfileInfo.module.css'
 import Status from './ProfileStatus'
+import {updateStatus} from "../../redux/profileReducer";
 
 const ProfileInfo = (props) => {
     return (
@@ -23,7 +24,7 @@ const ProfileInfo = (props) => {
 
             <div className={s.id}>
                 <span>@{props.profileData.userId}</span>
-                <span><Status status={'Hello World'}/></span>
+                <span><Status updateStatus={props.updateStatus} status={props.profilePage.status}/></span>
             </div>
 
         </div>

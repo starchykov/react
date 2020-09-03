@@ -28,12 +28,27 @@ export const ProfileApi = {
     getProfile: (id) => {
         return instance.get(`profile/` + id)
             .then(response => response.data)
+    },
+
+    getStatus: (id) => {
+        return instance.get(`profile/status/${id}`).then(response => response)
+    },
+
+    updateStatus: (status) => {
+        return instance.put('profile/status', {status: status}).then(response => response.data)
     }
 };
 
 export const AuthApi = {
     authMe: () => {
         return instance.get('auth/me')
+            .then(response => response.data);
+    }
+};
+
+export const LoginApi = {
+    Login: (data) => {
+        return instance.post('auth/login', {data})
             .then(response => response.data);
     }
 };

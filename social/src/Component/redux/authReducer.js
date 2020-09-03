@@ -1,4 +1,4 @@
-import {AuthApi, ProfileApi} from "./api";
+import {AuthApi, LoginApi, ProfileApi} from "./api";
 
 const AUTHORIZE_ME = 'AUTHORIZE-ME';
 const SET_USER_INFO = 'SET-USER-INFO';
@@ -10,6 +10,7 @@ const initialState = {
         email: null,
     },
     isAuthorized: null,
+
 
     currentUser: {
         "aboutMe": null,
@@ -81,6 +82,12 @@ export const authorize = (props) => (dispatch) => {
                 dispatch(setCurrentUser(response))
             })
         }
+    })
+};
+
+export const LoginMe =(data)=> (dispatch)=>{
+    LoginApi.Login(data).then(response=> {
+      dispatch(setAuthorizeData(response.data))
     })
 };
 

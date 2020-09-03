@@ -3,6 +3,7 @@ import {ProfileApi} from "./api";
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET-USER-PROFILE';
+const SET_USER_STATUS = 'SET-USER-STATUS';
 
 
 let initialState = {
@@ -28,6 +29,8 @@ let initialState = {
             "large": 'https://pbs.twimg.com/profile_images/1080468018147328000/qbyMyWCs_200x200.jpg'
         }
     },
+
+    status: null,
 
     postData: [
         {
@@ -77,6 +80,12 @@ const profileReducer = (state = initialState, action) => {
                 profileData: action.profileData
             };
 
+        case SET_USER_STATUS:
+            return {
+                ...state,
+                status: action.status
+            };
+
 
         default:
             return state
@@ -104,10 +113,28 @@ export let setUserProfile = (profileData) => {
     }
 };
 
+export let setUserStatus = (status) => {
+    return {
+        type: SET_USER_STATUS,
+        status
+    }
+};
+
+
 export const setProfile = (id) => (dispatch) => {
     ProfileApi.getProfile(id).then(data => {
         dispatch(setUserProfile(data))
     })
+};
+
+export const setStatus = (id) => (dispatch) => {
+    ProfileApi.getStatus(id).then(response => {
+        response.status === 200 && dispatch(setUserStatus(response.data))
+    })
+};
+
+export const updateStatus = (status) => (dispatch) => {
+    ProfileApi.updateStatus(status).then(data => data.resultCode === 0 && dispatch(setUserStatus(status)))
 };
 
 

@@ -14,13 +14,8 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        addMessage: () => {
-            dispatch(addMessageActionCreator())
-        },
-
-        onMessageChange: (e) => {
-            let text = e.target.value;
-            dispatch(onMessageChangeActionCreator(text))
+        onSubmit: (values) => {
+            dispatch(addMessageActionCreator(values.messageText))
         }
     }
 };

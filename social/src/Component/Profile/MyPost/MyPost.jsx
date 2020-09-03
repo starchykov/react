@@ -12,10 +12,8 @@ const MyPost = (props) => {
 
     return (
         <div className={s.myPost}>
-            <Input f={props.addPost}
-                   newTextRef={props.newPostText}
-                   newText={props.profilePage.newPostText}
-                   onChange={props.onPostChange}/>
+            <Input name={'postText'}
+                   onChange={props.onSubmit}/>
             {postElement}
         </div>
     )

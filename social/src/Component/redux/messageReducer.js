@@ -48,7 +48,7 @@ const messageReducer = (state = initialState, action) => {
         case ADD_MESSAGE:
             let newMessage = {
                 id: state.messagesData.length,
-                text: state.newMessageText,
+                text: action.text,
             };
 
             return {
@@ -68,16 +68,10 @@ const messageReducer = (state = initialState, action) => {
     }
 };
 
-export let addMessageActionCreator = () => {
+export let addMessageActionCreator = (text) => {
     return {
-        type: ADD_MESSAGE
-    }
-};
-
-export let onMessageChangeActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_MESSAGE_TEXT,
-        newText: text
+        type: ADD_MESSAGE,
+        text
     }
 };
 

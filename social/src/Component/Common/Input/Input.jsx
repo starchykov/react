@@ -1,18 +1,24 @@
 import s from "./Input.module.css";
 import React from "react";
+import {Field} from "redux-form";
 
 const Input = (props) => {
 
     return (
-        <div className={s.inputBlock}>
+        <form onSubmit={props.handleSubmit}>
+            <div className={s.inputBlock}>
 
-            <input type="text"
-                   onChange={props.onChange}
-                   value={props.newText}/>
 
-            <button onClick={() => props.f()}>Send</button>
+                <Field component={'input'}
+                       name={props.name}
+                       type="text"
+                       value={props.newText}/>
 
-        </div>
+                <button>Send</button>
+            </div>
+        </form>
+
+
     )
 };
 

@@ -12,7 +12,7 @@ const Profile = (props) => {
                 -- {props.profileData.fullName}
             </span>
 
-            <ProfileInfo profileData={props.profileData}/>
+            <ProfileInfo {...props}/>
 
             <MyPostContainer/>
 

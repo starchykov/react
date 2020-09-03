@@ -11,13 +11,8 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        addPost: () => {
-            dispatch(addPostActionCreator())
-        },
-
-        onPostChange: (e) => {
-            let text = e.target.value;
-            dispatch(onPostChangeActionCreator(text))
+        onSubmit: (values) => {
+            dispatch(addPostActionCreator(values.postText))
         }
     }
 };

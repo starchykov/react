@@ -57,7 +57,7 @@ const profileReducer = (state = initialState, action) => {
             let newPost = {
                 id: state.postData.length,
                 name: 'Ivan Starchykov',
-                text: state.newPostText,
+                text: action.postText,
                 likeCount: '6'
             };
 
@@ -68,11 +68,11 @@ const profileReducer = (state = initialState, action) => {
             };
 
 
-        case UPDATE_NEW_POST_TEXT:
-            return {
-                ...state,
-                newPostText: action.newText
-            };
+        // case UPDATE_NEW_POST_TEXT:
+        //     return {
+        //         ...state,
+        //         newPostText: action.newText
+        //     };
 
         case SET_USER_PROFILE:
             return {
@@ -93,18 +93,19 @@ const profileReducer = (state = initialState, action) => {
 };
 
 
-export let addPostActionCreator = () => {
+export let addPostActionCreator = (postText) => {
     return {
-        type: ADD_POST
+        type: ADD_POST,
+        postText
     }
 };
 
-export let onPostChangeActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_POST_TEXT,
-        newText: text
-    }
-};
+// export let onPostChangeActionCreator = (text) => {
+//     return {
+//         type: UPDATE_NEW_POST_TEXT,
+//         newText: text
+//     }
+// };
 
 export let setUserProfile = (profileData) => {
     return {

@@ -6,18 +6,16 @@ import {compose} from "redux";
 import withAuthRedirect from "../hoc/withAuthRedirect";
 
 
-let mapStateToProps = (state) => {
-    return {
-        messagesPage: state.messagesPage,
-    }
-};
+let mapStateToProps = (state) => ({
+    messagesPage: state.messagesPage,
+});
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-        onSubmit: (values) => {
-            dispatch(addMessageActionCreator(values.messageText))
-        }
-    }
-};
+// let mapDispatchToProps = (dispatch) => {
+//     return {
+//         onSubmit: (values) => {
+//             dispatch(addMessageActionCreator(values.messageText))
+//         }
+//     }
+// };
 
-export default compose(connect(mapStateToProps, mapDispatchToProps), withAuthRedirect)(Dialogs);
+export default compose(connect(mapStateToProps, {addMessageActionCreator}), withAuthRedirect)(Dialogs);

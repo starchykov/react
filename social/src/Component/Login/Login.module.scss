@@ -11,6 +11,11 @@
   border-radius: 30px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 
   h1 {
     font-size: 50px;
@@ -19,6 +24,12 @@
 
   span {
     width: 100%;
+
+    &:last-of-type {
+      display: block;
+      width: 50%;
+      margin: 20px;
+    }
   }
 
   input {
@@ -33,6 +44,7 @@
     padding: 0 20px;
     font-size: 18px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
     &::-webkit-input-placeholder {
       color: white;
       opacity: 20%;
@@ -47,7 +59,7 @@
     outline: none;
     color: white;
     border-radius: 30px;
-    margin: 45px 0;
+    margin: 45px 0 20px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
     &:hover {

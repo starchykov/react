@@ -54,14 +54,13 @@ const messageReducer = (state = initialState, action) => {
             return {
                 ...state,
                 messagesData: [...state.messagesData, newMessage],
-                newMessageText: ''
             };
 
-        case UPDATE_NEW_MESSAGE_TEXT:
-            return {
-                ...state,
-                newMessageText: action.newText
-            };
+        // case UPDATE_NEW_MESSAGE_TEXT:
+        //     return {
+        //         ...state,
+        //         newMessageText: action.newText
+        //     };
 
         default:
             return state
@@ -71,8 +70,15 @@ const messageReducer = (state = initialState, action) => {
 export let addMessageActionCreator = (text) => {
     return {
         type: ADD_MESSAGE,
-        text
+        text: text
     }
 };
+
+// export let onMessageChangeActionCreator = (text) => {
+//     return {
+//         type: UPDATE_NEW_MESSAGE_TEXT,
+//         newText: text
+//     }
+// };
 
 export default messageReducer;

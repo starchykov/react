@@ -2,6 +2,7 @@ import React from 'react'
 import s from './MyPost.module.css'
 import Post from "./Post/Post";
 import Input from "../../Common/Input/Input";
+import {reduxForm} from "redux-form";
 
 const MyPost = (props) => {
 
@@ -10,10 +11,13 @@ const MyPost = (props) => {
                                                                    text={el.text}
                                                                    likeCount={el.likeCount}/>);
 
+
+    let AddPostReduxForm = reduxForm({form: 'AddPostForm'})(Input);
+
     return (
         <div className={s.myPost}>
-            <Input name={'postText'}
-                   onChange={props.onSubmit}/>
+            <AddPostReduxForm name={'postText'}
+                              onSubmit={props.onSubmit}/>
             {postElement}
         </div>
     )

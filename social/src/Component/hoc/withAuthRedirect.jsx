@@ -12,7 +12,7 @@ let withAuthRedirect = (Component) => {
 
         render() {
             if (!this.props.isAuthorized) return <Redirect to={'/login'}/>;
-            return <Component {...this.props}/>
+            else return <Component {...this.props}/>
         }
     }
 

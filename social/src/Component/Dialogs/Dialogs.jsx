@@ -15,6 +15,10 @@ const Dialogs = (props) => {
     let messagesElement = props.messagesPage.messagesData.map((el) => <Messages key={el.id}
                                                                                 message={el.text}/>);
 
+    let AddMessage = (values) => {
+        props.addMessageActionCreator(values.messageText);
+    };
+
     let AddMessageFormRedux = reduxForm({form: 'MessageForm'})(Input);
 
     return (
@@ -32,7 +36,7 @@ const Dialogs = (props) => {
 
             <div className={s.inputBlock}>
                 <AddMessageFormRedux name={'messageText'}
-                                     onSubmit={props.onSubmit}/>
+                                     onSubmit={AddMessage}/>
             </div>
 
         </div>

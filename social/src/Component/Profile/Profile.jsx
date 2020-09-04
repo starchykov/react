@@ -8,9 +8,9 @@ const Profile = (props) => {
     return (
         <div className={s.profile}>
 
-            <span className={s.name}>
-                -- {props.profileData.fullName}
-            </span>
+            {/*<span className={s.name}>*/}
+            {/*    -- {props.profileData.fullName}*/}
+            {/*</span>*/}
 
             <ProfileInfo {...props}/>
 

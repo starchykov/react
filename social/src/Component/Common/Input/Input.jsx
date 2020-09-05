@@ -1,6 +1,10 @@
 import s from "./Input.module.css";
 import React from "react";
 import {Field} from "redux-form";
+import {maxLengthCreator, required} from "../../../utils/Validators/Validators";
+import {TextareaForm} from "./FormControl";
+
+let maxLength10 = maxLengthCreator(50);
 
 const Input = (props) => {
 
@@ -9,16 +13,15 @@ const Input = (props) => {
             <div className={s.inputBlock}>
 
 
-                <Field component={'input'}
+                <Field component={TextareaForm}
                        name={props.name}
                        type="text"
-                       value={props.newText}/>
+                       validate={[required, maxLength10]}
+                       autocomplete={'off'}/>
 
                 <button>Send</button>
             </div>
         </form>
-
-
     )
 };
 

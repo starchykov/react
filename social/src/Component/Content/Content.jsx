@@ -22,11 +22,9 @@ const Content = (props) => {
                             <button>☰</button>
 
                             <div className={s.menuDropdown}>
-                                <span>1</span>
-                                <span>2</span>
-                                <span>3</span>
-                                <span>4</span>
-                                <span>5</span>
+                                <NavLink to={`/profile/${props.authorization.currentUser.userId}`}>My profile</NavLink>
+                                <NavLink to={''}>Setting</NavLink>
+                                <NavLink to={''}>Logout</NavLink>
                             </div>
                         </div>
 
@@ -37,7 +35,15 @@ const Content = (props) => {
             </div>
 
             <div className={s.photos}>
-
+                <div> </div>
+                <div> </div>
+                <div> </div>
+                <div> </div>
+                <div> </div>
+                <div> </div>
+                <div> </div>
+                <div> </div>
+                <div> </div>
             </div>
 
             <div className={s.friends}>
@@ -52,12 +58,3 @@ const Content = (props) => {
     )
 };
 export default Content;
-
-
-{/*<svg xmlns="http://www.w3.org/2000/svg"*/}
-{/*     width="8" */}
-{/*     height="4" */}
-{/*     viewBox="0 0 8 4">*/}
-{/*    <path fill="none" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"*/}
-{/*          d="M.8.7L4 3.3 7.2.7"></path>*/}
-{/*</svg>;*/}

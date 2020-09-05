@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './ProfileInfo.module.css'
 import Status from './ProfileStatus'
-import {updateStatus} from "../../redux/profileReducer";
 
 const ProfileInfo = (props) => {
     return (

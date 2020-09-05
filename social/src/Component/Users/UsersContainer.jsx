@@ -1,9 +1,9 @@
 import React from 'react'
 import {connect} from "react-redux";
 import Users from "./Users";
-import {follow, unfollow, setActionProgress, getUsers} from "../redux/usersReducer";
-import {UsersApi} from "../redux/api";
-import withAuthRedirect from "../hoc/withAuthRedirect";
+import {follow, unfollow, setActionProgress, getUsers} from "../../redux/usersReducer";
+import {UsersApi} from "../../redux/api";
+import withAuthRedirect from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
 
 class UsersContainer extends React.Component {

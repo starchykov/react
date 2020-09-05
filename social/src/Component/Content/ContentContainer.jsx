@@ -1,7 +1,7 @@
 import React from "react";
 import Content from "./Content";
 import {connect} from "react-redux";
-import {authorize, setAuthorizeData, setCurrentUser} from "../redux/authReducer";
+import {authorize, setAuthorizeData, setCurrentUser} from "../../redux/authReducer";
 
 class ContentContainer extends React.Component {
 

@@ -89,8 +89,15 @@
 .content .authInfo .authData .menu .menuDropdown:hover {
   display: block;
 }
-.content .authInfo .authData .menu .menuDropdown span {
+.content .authInfo .authData .menu .menuDropdown a {
   display: block;
+  margin: 20px 5px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.content .authInfo .authData .menu .menuDropdown a:hover {
+  color: #1da1f2;
+  padding: 0 0 0 10px;
 }
 .content .authInfo a {
   color: #566471;
@@ -101,12 +108,22 @@
   color: #1da1f2;
 }
 .content .photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
   border-radius: 16px;
   background: #253341;
   height: 200px;
   width: 100%;
   margin-bottom: 50px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.content .photos div {
+  width: 33.3%;
+  height: 33.3%;
+  background: #1da1f2;
+  outline: 5px solid #15202b;
 }
 .content .friends {
   border-radius: 16px;

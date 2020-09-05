@@ -35,7 +35,6 @@
     position: relative;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
-
     &:nth-last-of-type {
       margin: 0;
     }
@@ -65,9 +64,10 @@
         height: 100%;
         width: 30px;
 
-        &:hover .menuDropdown{
+        &:hover .menuDropdown {
           display: block;
         }
+
         &:hover button {
           opacity: 1;
         }
@@ -94,19 +94,26 @@
           left: 0;
           padding: 25% 10px 10px 10px;
           background: #253341;
-          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           z-index: 1;
 
           &:hover {
             display: block;
           }
 
-          span {
+          a {
             display: block;
+            margin: 20px 5px;
+            font-weight: bold;
+            transition: 0.5s;
+
+            &:hover {
+              color: #1da1f2;
+              padding: 0 0 0 10px;
+            }
           }
         }
       }
-
 
 
     }
@@ -123,6 +130,10 @@
   }
 
   .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
     border-radius: 16px;
     background: #253341;
     height: 200px;
@@ -130,6 +141,12 @@
     margin-bottom: 50px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
+    div {
+      width: 33.3%;
+      height: 33.3%;
+      background: #1da1f2;
+      outline: 5px solid #15202b;
+    }
   }
 
   .friends {

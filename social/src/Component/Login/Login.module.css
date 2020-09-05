@@ -1,10 +1,6 @@
 .loginBox {
   width: 65%;
   margin: 50px auto 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   font-family: sans-serif;
   padding: 25px;
   border-radius: 30px;
@@ -18,32 +14,18 @@
   font-size: 50px;
   color: white;
 }
-.loginBox span {
+.loginBox .inputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
   width: 100%;
 }
-.loginBox span:last-of-type {
+.loginBox .inputContainer:last-of-type span {
   display: block;
   width: 50%;
   margin: 20px;
 }
-.loginBox input {
-  width: 100%;
-  margin: 20px 0;
-  height: 50px;
-  background: #253341;
-  border: none;
-  border-radius: 30px;
-  outline: none;
-  color: white;
-  padding: 0 20px;
-  font-size: 18px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-.loginBox input::-webkit-input-placeholder {
-  color: white;
-  opacity: 20%;
-}
-.loginBox button {
+.loginBox .inputContainer button {
   width: 100%;
   height: 50px;
   border: #1da1f2;
@@ -54,10 +36,10 @@
   margin: 45px 0 20px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.loginBox button:hover {
+.loginBox .inputContainer button:hover {
   background: #1d90f2;
 }
-.loginBox .checkBox {
+.loginBox .inputContainer .checkBox {
   width: 20px;
   height: 20px;
 }

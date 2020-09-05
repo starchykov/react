@@ -1,10 +1,7 @@
 .loginBox {
   width: 65%;
   margin: 50px auto 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+
   font-family: sans-serif;
 
   padding: 25px;
@@ -22,53 +19,39 @@
     color: white;
   }
 
-  span {
+  .inputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
     width: 100%;
 
-    &:last-of-type {
+    &:last-of-type span {
       display: block;
       width: 50%;
       margin: 20px;
     }
-  }
 
-  input {
-    width: 100%;
-    margin: 20px 0;
-    height: 50px;
-    background: #253341;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    color: white;
-    padding: 0 20px;
-    font-size: 18px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-
-    &::-webkit-input-placeholder {
+    button {
+      width: 100%;
+      height: 50px;
+      border: #1da1f2;
+      background: #1da1f2;
+      outline: none;
       color: white;
-      opacity: 20%;
+      border-radius: 30px;
+      margin: 45px 0 20px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+      &:hover {
+        background: #1d90f2;
+      }
     }
-  }
 
-  button {
-    width: 100%;
-    height: 50px;
-    border: #1da1f2;
-    background: #1da1f2;
-    outline: none;
-    color: white;
-    border-radius: 30px;
-    margin: 45px 0 20px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-
-    &:hover {
-      background: #1d90f2;
+    .checkBox {
+      width: 20px;
+      height: 20px;
     }
+
   }
 
-  .checkBox {
-    width: 20px;
-    height: 20px;
-  }
 }

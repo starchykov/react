@@ -11,7 +11,6 @@ const MyPost = (props) => {
                                                                    text={el.text}
                                                                    likeCount={el.likeCount}/>);
 
-
     let AddPostReduxForm = reduxForm({form: 'AddPostForm'})(Input);
 
     return (

@@ -2,6 +2,7 @@ import {AuthApi, LoginApi, ProfileApi} from "./api";
 
 const AUTHORIZE_ME = 'AUTHORIZE-ME';
 const SET_USER_INFO = 'SET-USER-INFO';
+const DEL_USER_INFO = 'DEL-USER-INFO';
 
 const initialState = {
     authData: {
@@ -9,7 +10,7 @@ const initialState = {
         login: null,
         email: null,
     },
-    isAuthorized: null,
+    isAuthorized: false,
 
 
     currentUser: {
@@ -52,6 +53,32 @@ const authorizationReducer = (state = initialState, action) => {
                 ...state,
                 currentUser: action.currentUserData
             };
+        case DEL_USER_INFO:
+            return {
+                ...state,
+                currentUser: {
+                    "aboutMe": null,
+                    "contacts": {
+                        "facebook": null,
+                        "website": null,
+                        "vk": null,
+                        "twitter": null,
+                        "instagram": null,
+                        "youtube": null,
+                        "github": null,
+                        "mainLink": null
+                    },
+                    "lookingForAJob": null,
+                    "lookingForAJobDescription": null,
+                    "fullName": null,
+                    "userId": null,
+                    "photos": {
+                        "small": null,
+                        "large": null
+                    },
+                    authData: null
+                }
+            };
 
         default:
             return state
@@ -72,6 +99,12 @@ export let setCurrentUser = (currentUserData) => {
     }
 };
 
+export let delCurrentUser = () => {
+    return {
+        type: DEL_USER_INFO,
+    }
+};
+
 export const authorize = (props) => (dispatch) => {
     AuthApi.authMe().then(data => {
 
@@ -85,9 +118,20 @@ export const authorize = (props) => (dispatch) => {
     })
 };
 
-export const LoginMe =(data)=> (dispatch)=>{
-    LoginApi.Login(data).then(response=> {
-      dispatch(setAuthorizeData(response.data))
+export const LoginMe = (data) => (dispatch) => {
+    LoginApi.Login(data).then(response => {
+        dispatch(setAuthorizeData(response.data));
+
+        ProfileApi.getProfile(response.data.userId).then(response => {
+            dispatch(setCurrentUser(response))
+        })
+    })
+};
+
+export const LogOutMe = () => (dispatch) => {
+    LoginApi.Logout().then(response => {
+        if (response.resultCode === 0)
+            dispatch(delCurrentUser())
     })
 };
 

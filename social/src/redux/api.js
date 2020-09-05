@@ -48,7 +48,11 @@ export const AuthApi = {
 
 export const LoginApi = {
     Login: (data) => {
-        return instance.post('auth/login', {data})
+        return instance.post('auth/login', {...data})
             .then(response => response.data);
-    }
+    },
+    Logout: (data) => {
+        return instance.delete('auth/login')
+            .then(response => response.data);
+    },
 };

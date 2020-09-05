@@ -17,7 +17,7 @@ const Input = (props) => {
                        name={props.name}
                        type="text"
                        validate={[required, maxLength10]}
-                       autocomplete={'off'}/>
+                       autoComplete={'off'}/>
 
                 <button>Send</button>
             </div>

@@ -14,9 +14,7 @@ export const FormControl = ({input, meta, child, ...props}) => {
 };
 
 export const TextareaForm = (props) => {
-
     const {input, meta, child, ...restProps} = props;
-
     return  <FormControl {...props}> <textarea className={meta.touched && meta.error && s.error} {...input} {...restProps}/> </FormControl>
 };
 

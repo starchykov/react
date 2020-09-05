@@ -24,7 +24,7 @@ const Content = (props) => {
                             <div className={s.menuDropdown}>
                                 <NavLink to={`/profile/${props.authorization.currentUser.userId}`}>My profile</NavLink>
                                 <NavLink to={''}>Setting</NavLink>
-                                <NavLink to={''}>Logout</NavLink>
+                                <NavLink onClick={props.LogOutMe} to={'/login'}>Logout</NavLink>
                             </div>
                         </div>
 

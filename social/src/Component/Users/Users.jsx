@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './Users.module.css'
 import UserItem from "./UserItem/UserItem";
-import Loader from "../Common/Loader/Loader";
+import {LoaderData} from "../Common/Loader/Loader";
 
 const Users = (props) => {
 
@@ -39,7 +39,7 @@ const Users = (props) => {
                     </span>)}
             </div>
 
-            {props.isFetching === true ? <Loader/> : userItem}
+            {props.isFetching === true ? <LoaderData/> : userItem}
 
         </div>
     )

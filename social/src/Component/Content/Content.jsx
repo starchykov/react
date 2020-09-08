@@ -12,7 +12,7 @@ const Content = (props) => {
                     ? <div className={s.authData}>
                         <span>{props.authorization.currentUser.fullName}</span>
                         <img className={s.authLogo}
-                             src={props.authorization.currentUser.photos.large
+                             src={props.authorization.currentUser.photos.large || null || undefined
                                  ? props.authorization.currentUser.photos.large
                                  : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'}
                              alt=""/>

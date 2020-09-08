@@ -2,14 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f54ab95-ed99-421b-919b-cb3c6a3fdc41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/social/src/Component/Common/Loader/Loader.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/src/redux/appReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/src/Component/Common/Input/FormControl.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Common/Input/FormControl.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/src/Component/Common/Input/Input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Common/Input/Input.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Common/Loader/Loader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Common/Loader/Loader.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/src/Component/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Content/Content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/src/Component/Content/ContentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Content/ContentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Dialogs/DialogsContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/src/Component/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/src/redux/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/redux/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Login/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Login/Login.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Login/Login.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Login/Login.module.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Login/Login.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Login/Login.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Profile/ProfileContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Users/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Users/Users.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Users/Users.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Users/Users.module.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Users/Users.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Users/Users.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/Component/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/hoc/withAuthRedirect.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/hoc/withAuthRedirect.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/src/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/redux/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/redux/profileReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/redux/reduxStore.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,34 +45,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/social/src/redux/api.js">
+        <entry file="file://$PROJECT_DIR$/social/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+            <state relative-caret-position="287">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/social/src/Component/Login/Login.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/social/src/Component/Login/Login.module.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -63,19 +59,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/social/src/redux/authReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/social/src/Component/Content/ContentContainer.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="306">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="26" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#168#235#0" />
+                <element signature="e#408#415#0" />
               </folding>
             </state>
           </provider>
@@ -84,10 +73,55 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/social/src/Component/Content/Content.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="612">
+              <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social/src/redux/profileReducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social/src/redux/appReducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/ProfileContainer.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/social/src/redux/reduxStore.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#0#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,25 +144,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/social/src/App.js" />
         <option value="$PROJECT_DIR$/social/src/Component/Login/Login.module.css" />
-        <option value="$PROJECT_DIR$/social/src/Component/Users/UsersContainer.jsx" />
-        <option value="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.scss" />
         <option value="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/Status.module.scss" />
-        <option value="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileStatus.jsx" />
         <option value="$PROJECT_DIR$/social/src/Component/redux/reduxStore.js" />
         <option value="$PROJECT_DIR$/social/src/Component/redux/api.js" />
         <option value="$PROJECT_DIR$/social/src/Component/redux/authReducer.js" />
         <option value="$PROJECT_DIR$/social/src/Component/redux/profileReducer.js" />
         <option value="$PROJECT_DIR$/social/src/Component/redux/messageReducer.js" />
         <option value="$PROJECT_DIR$/social/src/Component/Dialogs/Dialogs.jsx" />
-        <option value="$PROJECT_DIR$/social/src/Component/Profile/ProfileContainer.jsx" />
         <option value="$PROJECT_DIR$/social/src/Component/hoc/withAuthRedirect.jsx" />
         <option value="$PROJECT_DIR$/social/src/Component/Profile/Profile.jsx" />
         <option value="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.jsx" />
         <option value="$PROJECT_DIR$/social/src/redux/messageReducer.js" />
-        <option value="$PROJECT_DIR$/social/src/redux/profileReducer.js" />
-        <option value="$PROJECT_DIR$/social/src/Component/Dialogs/DialogsContainer.jsx" />
         <option value="$PROJECT_DIR$/social/src/Component/Profile/MyPost/MyPostContainer.jsx" />
         <option value="$PROJECT_DIR$/social/src/utils/Validators/Validators.js" />
         <option value="$PROJECT_DIR$/social/src/Component/Profile/MyPost/MyPost.module.scss" />
@@ -136,14 +163,29 @@
         <option value="$PROJECT_DIR$/social/src/Component/Common/Input/FormControl.module.scss" />
         <option value="$PROJECT_DIR$/social/src/Component/Common/Input/Input.module.scss" />
         <option value="$PROJECT_DIR$/social/src/Component/Profile/MyPost/MyPost.jsx" />
-        <option value="$PROJECT_DIR$/social/src/Component/Common/Input/FormControl.jsx" />
-        <option value="$PROJECT_DIR$/social/src/Component/Content/ContentContainer.jsx" />
         <option value="$PROJECT_DIR$/social/src/Component/Common/Input/Input.jsx" />
         <option value="$PROJECT_DIR$/social/src/redux/api.js" />
+        <option value="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileStatus.jsx" />
+        <option value="$PROJECT_DIR$/social/src/Component/Dialogs/DialogsContainer.jsx" />
+        <option value="$PROJECT_DIR$/social/src/Component/Users/UsersContainer.jsx" />
+        <option value="$PROJECT_DIR$/social/src/Component/Login/Login.module.scss" />
+        <option value="$PROJECT_DIR$/social/public/index.html" />
+        <option value="$PROJECT_DIR$/social/src/redux/reduxStore.js" />
+        <option value="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.scss" />
+        <option value="$PROJECT_DIR$/social/src/Component/Users/Users.module.scss" />
+        <option value="$PROJECT_DIR$/social/src/Component/Users/Users.jsx" />
+        <option value="$PROJECT_DIR$/social/src/Component/Common/Loader/Loader.module.scss" />
+        <option value="$PROJECT_DIR$/social/src/Component/Content/ContentContainer.jsx" />
+        <option value="$PROJECT_DIR$/social/src/Component/Common/Loader/Loader.jsx" />
+        <option value="$PROJECT_DIR$/social/src/redux/appReducer.js" />
+        <option value="$PROJECT_DIR$/social/src/Component/Login/Login.jsx" />
+        <option value="$PROJECT_DIR$/social/src/Component/Common/Input/FormControl.jsx" />
+        <option value="$PROJECT_DIR$/social/src/App.js" />
+        <option value="$PROJECT_DIR$/social/src/hoc/withAuthRedirect.jsx" />
         <option value="$PROJECT_DIR$/social/src/Component/Content/Content.jsx" />
         <option value="$PROJECT_DIR$/social/src/redux/authReducer.js" />
-        <option value="$PROJECT_DIR$/social/src/Component/Login/Login.jsx" />
-        <option value="$PROJECT_DIR$/social/src/Component/Login/Login.module.scss" />
+        <option value="$PROJECT_DIR$/social/src/redux/profileReducer.js" />
+        <option value="$PROJECT_DIR$/social/src/Component/Profile/ProfileContainer.jsx" />
       </list>
     </option>
   </component>
@@ -198,15 +240,14 @@
               <item name="social" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Component" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react" type="b2602c69:ProjectViewProjectNode" />
               <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="social" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Component" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
+              <item name="hoc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react" type="b2602c69:ProjectViewProjectNode" />
@@ -262,7 +303,7 @@
       <workItem from="1598957355226" duration="24987000" />
       <workItem from="1599108151348" duration="31091000" />
       <workItem from="1599308790964" duration="24696000" />
-      <workItem from="1599340542464" duration="3199000" />
+      <workItem from="1599340542464" duration="38710000" />
     </task>
     <task id="LOCAL-00001" summary="76">
       <created>1599142757899</created>
@@ -285,11 +326,18 @@
       <option name="project" value="LOCAL" />
       <updated>1599337751823</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="77 | redux-form / validation">
+      <created>1599345830069</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1599345830070</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84610000" />
+    <option name="totallyTimeSpent" value="120121000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -304,7 +352,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21162046" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21162046" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -319,9 +367,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3296582" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.34509373" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.11025358" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.11025358" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -429,36 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Users/UsersContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/Profile.module.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/Status.module.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -501,36 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileStatus.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/hoc/withAuthRedirect.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/ProfileContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="95" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="95" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social/src/redux/messageReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1200">
@@ -541,57 +529,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/redux/profileReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="45" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/redux/reduxStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Dialogs/DialogsContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/MyPost/MyPostContainer.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/Profile.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -649,27 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Common/Input/FormControl.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="75" column="1" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#345#0" />
-            <element signature="e#356#957#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Common/Input/FormControl.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social/src/Component/Common/Input/Input.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -680,47 +600,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/redux/api.js">
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+        <state relative-caret-position="68">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Content/Content.jsx">
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/Profile.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="238">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Content/ContentContainer.jsx">
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Dialogs/DialogsContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Users/UsersContainer.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/redux/authReducer.js">
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileStatus.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+        <state relative-caret-position="476">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/src/Component/Login/Login.jsx">
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Common/Input/FormControl.module.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="272">
+          <caret line="65" column="20" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="65" selection-end-column="20" />
+          <folding>
+            <element signature="e#6#345#0" />
+            <element signature="e#356#957#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/redux/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -729,8 +670,189 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/social/src/Component/Login/Login.module.scss">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Header/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/Profile.module.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Users/Users.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="75" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Common/Loader/Loader.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Common/Loader/Loader.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="117" column="2" lean-forward="true" selection-start-line="117" selection-start-column="2" selection-end-line="117" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Common/Input/FormControl.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Login/Login.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/hoc/withAuthRedirect.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Users/Users.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-782">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Content/ContentContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/redux/authReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#168#235#0" />
+            <element signature="e#408#415#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Content/Content.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/redux/profileReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/redux/appReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/Component/Profile/ProfileContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/src/redux/reduxStore.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

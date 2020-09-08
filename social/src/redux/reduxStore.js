@@ -6,6 +6,7 @@ import sideBarReducer from "./sideBarReducer";
 import usersReducer from "./usersReducer";
 import authorizationReducer from "./authReducer";
 import { reducer as formReducer } from 'redux-form'
+import appInitialized from "./appReducer";
 
 
 let reducers = combineReducers({
@@ -14,7 +15,8 @@ let reducers = combineReducers({
     sideBar: sideBarReducer,
     usersPage: usersReducer,
     authorization: authorizationReducer,
-    form: formReducer
+    form: formReducer,
+    app: appInitialized
 
 });
 

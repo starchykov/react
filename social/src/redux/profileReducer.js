@@ -9,28 +9,28 @@ const SET_USER_STATUS = 'SET-USER-STATUS';
 let initialState = {
 
     profileData: {
-        "aboutMe": null,
-        "contacts": {
-            "facebook": null,
-            "website": null,
-            "vk": null,
-            "twitter": null,
-            "instagram": null,
-            "youtube": null,
-            "github": null,
-            "mainLink": null
+        'aboutMe': null,
+        'contacts': {
+            'facebook': null,
+            'website': null,
+            'vk': null,
+            'twitter': null,
+            'instagram': null,
+            'youtube': null,
+            'github': null,
+            'mainLink': null
         },
-        "lookingForAJob": false,
-        "lookingForAJobDescription": null,
-        "fullName": "Older",
-        "userId": 8758,
-        "photos": {
-            "small": null,
-            "large": 'https://pbs.twimg.com/profile_images/1080468018147328000/qbyMyWCs_200x200.jpg'
+        'lookingForAJob': null,
+        'lookingForAJobDescription': null,
+        'fullName': '',
+        'userId': null,
+        'photos': {
+            'small': null,
+            'large': 'https://pbs.twimg.com/profile_images/1080468018147328000/qbyMyWCs_200x200.jpg'
         }
     },
 
-    status: null,
+    status: '',
 
     postData: [
         {
@@ -45,8 +45,7 @@ let initialState = {
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem deserunt dolorem doloribus suscipit? Alias aut, cum deserunt doloremque excepturi hic ipsa ipsum minus modi nihil, praesentium suscipit temporibus, voluptas.',
             likeCount: '0'
         },
-    ],
-    newPostText: ''
+    ]
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -100,12 +99,6 @@ export let addPostActionCreator = (postText) => {
     }
 };
 
-// export let onPostChangeActionCreator = (text) => {
-//     return {
-//         type: UPDATE_NEW_POST_TEXT,
-//         newText: text
-//     }
-// };
 
 export let setUserProfile = (profileData) => {
     return {
@@ -122,17 +115,20 @@ export let setUserStatus = (status) => {
 };
 
 
-export const setProfile = (id) => (dispatch) => {
+export const setProfileInfo = (id) => (dispatch) => {
     ProfileApi.getProfile(id).then(data => {
         dispatch(setUserProfile(data))
-    })
-};
-
-export const setStatus = (id) => (dispatch) => {
+    });
     ProfileApi.getStatus(id).then(response => {
         response.status === 200 && dispatch(setUserStatus(response.data))
     })
 };
+
+// export const setStatus = (id) => (dispatch) => {
+//     ProfileApi.getStatus(id).then(response => {
+//         response.status === 200 && dispatch(setUserStatus(response.data))
+//     })
+// };
 
 export const updateStatus = (status) => (dispatch) => {
     ProfileApi.updateStatus(status).then(data => data.resultCode === 0 && dispatch(setUserStatus(status)))

@@ -5,17 +5,26 @@ import {connect} from "react-redux";
 import {LoginMe} from "../../redux/authReducer";
 import {required} from "../../utils/Validators/Validators";
 import {InputForm} from "../Common/Input/FormControl";
+import {Redirect} from "react-router-dom";
 
 const LoginForm = (props) => {
+
+    if (props.isAuthorized) return <Redirect to={'/profile'}/>;
+
     return (
         <form onSubmit={props.handleSubmit}>
+            <div>
+                {props.error && <span className={s.commonError}>{props.error}</span>}
+            </div>
+
             <div className={s.inputContainer}>
                 <span>Login</span>
                 <Field component={InputForm}
                        name={'email'}
                        type='text'
                        placeholder={'Login'}
-                       validate={[required]}/>
+                       validate={[required]}
+                       error={props.error}/>
             </div>
 
 
@@ -25,7 +34,8 @@ const LoginForm = (props) => {
                        name={'password'}
                        type='password'
                        placeholder={'Password'}
-                       validate={[required]}/>
+                       validate={[required]}
+                       error={props.error}/>
             </div>
 
 
@@ -52,10 +62,13 @@ export const Login = (props) => {
     return (
         <div className={s.loginBox}>
             <h1>Welcome back</h1>
-            <LoginReduxForm onSubmit={onSubmit}/>
+            <LoginReduxForm onSubmit={onSubmit} {...props}/>
         </div>
     )
 };
 
+let mapStateToProps = (state) => ({
+    isAuthorized: state.authorization.isAuthorized
+});
 
-export default connect(null, {LoginMe})(Login);
+export default connect(mapStateToProps, {LoginMe})(Login);

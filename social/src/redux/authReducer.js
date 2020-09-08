@@ -1,4 +1,6 @@
 import {AuthApi, LoginApi, ProfileApi} from "./api";
+import {stopSubmit} from "redux-form";
+import {setProfileInfo} from "./profileReducer";
 
 const AUTHORIZE_ME = 'AUTHORIZE-ME';
 const SET_USER_INFO = 'SET-USER-INFO';
@@ -10,8 +12,8 @@ const initialState = {
         login: null,
         email: null,
     },
-    isAuthorized: false,
 
+    isAuthorized: false,
 
     currentUser: {
         "aboutMe": null,
@@ -45,7 +47,7 @@ const authorizationReducer = (state = initialState, action) => {
             return {
                 ...state,
                 authData: {...action.authData},
-                isAuthorized: true
+                isAuthorized: action.isAuthorized
             };
 
         case SET_USER_INFO:
@@ -56,28 +58,8 @@ const authorizationReducer = (state = initialState, action) => {
         case DEL_USER_INFO:
             return {
                 ...state,
-                currentUser: {
-                    "aboutMe": null,
-                    "contacts": {
-                        "facebook": null,
-                        "website": null,
-                        "vk": null,
-                        "twitter": null,
-                        "instagram": null,
-                        "youtube": null,
-                        "github": null,
-                        "mainLink": null
-                    },
-                    "lookingForAJob": null,
-                    "lookingForAJobDescription": null,
-                    "fullName": null,
-                    "userId": null,
-                    "photos": {
-                        "small": null,
-                        "large": null
-                    },
-                    authData: null
-                }
+                authData: {...initialState.authData},
+                isAuthorized: action.isAuthorized
             };
 
         default:
@@ -85,10 +67,11 @@ const authorizationReducer = (state = initialState, action) => {
     }
 };
 
-export const setAuthorizeData = (authData) => {
+export const setAuthorizeData = (authData, isAuthorized) => {
     return {
         type: AUTHORIZE_ME,
-        authData: authData.data
+        authData: authData.data,
+        isAuthorized
     }
 };
 
@@ -99,39 +82,38 @@ export let setCurrentUser = (currentUserData) => {
     }
 };
 
-export let delCurrentUser = () => {
+export let delCurrentUser = (isAuthorized) => {
     return {
         type: DEL_USER_INFO,
+        isAuthorized
     }
 };
 
+
 export const authorize = (props) => (dispatch) => {
-    AuthApi.authMe().then(data => {
-
+    return AuthApi.authMe().then(data => {
         if (data.resultCode === 0) {
-            dispatch(setAuthorizeData(data));
-
-            ProfileApi.getProfile(data.data.id).then(response => {
-                dispatch(setCurrentUser(response))
-            })
+            dispatch(setAuthorizeData(data, true));
+            ProfileApi.getProfile(data.data.id).then(response => dispatch(setCurrentUser(response)));
+            dispatch(setProfileInfo(data.data.id));
         }
     })
 };
 
 export const LoginMe = (data) => (dispatch) => {
     LoginApi.Login(data).then(response => {
-        dispatch(setAuthorizeData(response.data));
+        if (response.resultCode === 0) dispatch(authorize());
 
-        ProfileApi.getProfile(response.data.userId).then(response => {
-            dispatch(setCurrentUser(response))
-        })
+        else {
+            let responseMessage = response.messages.length > 0 ? response.messages[0] : 'Some error has occurred';
+            dispatch(stopSubmit('LoginForm', {_error: responseMessage}))
+        }
     })
 };
 
 export const LogOutMe = () => (dispatch) => {
     LoginApi.Logout().then(response => {
-        if (response.resultCode === 0)
-            dispatch(delCurrentUser())
+        if (response.resultCode === 0) dispatch(delCurrentUser(false))
     })
 };
 

@@ -11,12 +11,21 @@
   form {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
 
+  .commonError {
+    position: absolute;
+    top: -30px;
+    color: #ca2055;
+    font-weight: bold;
+  }
 
   h1 {
     font-size: 50px;
     color: white;
+    margin: 35px 0 50px 0;
+    text-align: center;
   }
 
   .inputContainer {

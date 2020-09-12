@@ -1,5 +1,6 @@
 import React from "react";
 import s from './Loader.module.css'
+import Logo from "../Logo/Logo";
 
 export const LoaderData = () => {
     return (
@@ -109,9 +110,10 @@ export const LoaderData = () => {
 };
 
 export const LoaderStart = () => {
+
     return (
         <div className={s.loaderStart}>
-            <img src="https://j-older.github.io/Projects/logo.svg" alt=""/>
+            <Logo/>
         </div>
     )
 

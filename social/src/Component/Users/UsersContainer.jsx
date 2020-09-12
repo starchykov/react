@@ -5,6 +5,7 @@ import {follow, unfollow, setActionProgress, getUsers} from "../../redux/usersRe
 import {UsersApi} from "../../redux/api";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {actionProgress, currentPage, isFetching, pageSize, totalCount, users} from "../../redux/usersSelectors";
 
 class UsersContainer extends React.Component {
 
@@ -28,12 +29,12 @@ class UsersContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalCount: state.usersPage.totalCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        actionProgress: state.usersPage.actionProgress
+        users: users(state),
+        pageSize: pageSize(state),
+        totalCount: totalCount(state),
+        currentPage: currentPage(state),
+        isFetching: isFetching(state),
+        actionProgress: actionProgress(state)
     }
 };
 

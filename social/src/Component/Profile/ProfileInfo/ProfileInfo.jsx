@@ -7,7 +7,9 @@ const ProfileInfo = (props) => {
         <div className={s.profileInfo}>
 
             <div className={s.bgImage}>
-                <img src="https://pbs.twimg.com/profile_banners/832854404743254016/1521034964/1500x500" alt=""/>
+                <img src={props.profileData.photos.large
+                    ? props.profileData.photos.large
+                    : 'https://alpha-cms.ru/style/user_icons/avatar_man.png'} alt=""/>
             </div>
 
             <div className={s.avatarImage}>

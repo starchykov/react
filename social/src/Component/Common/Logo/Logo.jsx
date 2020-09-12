@@ -1,8 +1,9 @@
 import React from "react";
+import logo from './Logo.png'
 
 
 const Logo = () => {
-    return <img src="https://j-older.github.io/Projects/logo.svg" alt="logo"/>
+    return <img src={logo} alt={'Logo'}/>
 };
 
 export default Logo;

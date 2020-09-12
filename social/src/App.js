@@ -11,7 +11,7 @@ import Login from "./Component/Login/Login";
 import {connect} from "react-redux";
 import {initialization} from "./redux/appReducer";
 import {compose} from "redux";
-import {LoaderStart} from "./Component/Common/Loader/Loader";
+import {LoaderData, LoaderStart} from "./Component/Common/Loader/Loader";
 
 class App extends Component {
 

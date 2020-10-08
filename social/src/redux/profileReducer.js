@@ -134,5 +134,4 @@ export const updateStatus = (status) => (dispatch) => {
     ProfileApi.updateStatus(status).then(data => data.resultCode === 0 && dispatch(setUserStatus(status)))
 };
 
-
 export default profileReducer;

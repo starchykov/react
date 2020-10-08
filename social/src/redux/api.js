@@ -9,10 +9,10 @@ const instance = axios.create({
     }
 });
 
-
 export const UsersApi = {
     getUsers: (currentPage = 1, pageSize) => {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`)
+        // return axios.get(`http://localhost:3010/users`)
             .then(response => response.data)
     },
     followApi: (userId) => {
@@ -22,7 +22,6 @@ export const UsersApi = {
         return instance.delete(`follow/` + userId).then(response => response.data)
     }
 };
-
 
 export const ProfileApi = {
     getProfile: (id) => {

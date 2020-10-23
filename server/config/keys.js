@@ -5,7 +5,7 @@ module.exports = {
         password: "Arkaim_13",
         database: "social"
     },
-    jwt: {
+    token: {
         jwt: 'dev-jwt'
     }
 }

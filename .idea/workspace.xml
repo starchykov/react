@@ -1,54 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="0f54ab95-ed99-421b-919b-cb3c6a3fdc41" name="Default Changelist" comment="80 | reselect /">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/config/keys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/passport_config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/src/Component/Common/Loader/Loader.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/src/Component/Common/Loader/Loader.module.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/src/Component/Common/Logo/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/src/Component/Common/Logo/Logo_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iconfinder_React.js_logo_1174949.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/social/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/social/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/social/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/Component/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/src/redux/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/redux/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/src/redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/social/src/redux/profileReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -80,81 +34,29 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectId" id="1hSryLiUij1fS8Xz57rEf2VfDsj" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="976" />
+    <option name="height" value="1066" />
+  </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
-  </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql&#10;mongo" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
-    <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/server.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ivan\Desktop\react\social\src" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\react\server" />
-    </key>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="start server" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="server" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="npm.start server" />
-      <item itemvalue="npm.start" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.start" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -172,13 +74,6 @@
       <workItem from="1599340542464" duration="43799000" />
       <workItem from="1599660435230" duration="2609000" />
       <workItem from="1599930608037" duration="282000" />
-      <workItem from="1600015624062" duration="1812000" />
-      <workItem from="1600019321454" duration="4181000" />
-      <workItem from="1600069476537" duration="3235000" />
-      <workItem from="1600362553602" duration="1031000" />
-      <workItem from="1600697218109" duration="18206000" />
-      <workItem from="1601582074624" duration="82000" />
-      <workItem from="1601582226237" duration="33041000" />
     </task>
     <task id="LOCAL-00001" summary="76">
       <created>1599142757899</created>
@@ -228,7 +123,7 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -257,88 +152,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="76" />
     <MESSAGE value="77 | redux-form / validation" />
     <MESSAGE value="80 | reselect /" />
     <option name="LAST_COMMIT_MESSAGE" value="80 | reselect /" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="429" y="189" key="#Notifications" timestamp="1600190690823">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="429" y="189" key="#Notifications/0.0.1366.738@0.0.1366.738" timestamp="1600190690823" />
-    <state x="72" y="205" key="#SQL_Dialects" timestamp="1601653383421">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="72" y="205" key="#SQL_Dialects/0.0.1366.738@0.0.1366.738" timestamp="1601653383421" />
-    <state x="274" y="0" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601587528907">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="274" y="0" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1601587528907" />
-    <state x="466" y="159" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600717793973">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="466" y="159" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1600717793973" />
-    <state x="416" y="207" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1600713828483">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="416" y="207" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.738@0.0.1366.738" timestamp="1600713828483" />
-    <state x="600" y="127" key="FileChooserDialogImpl" timestamp="1600710311634">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="600" y="127" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1600710311634" />
-    <state width="1322" height="122" key="GridCell.Tab.0.bottom" timestamp="1601908602871">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1322" height="122" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1601908602871" />
-    <state width="1322" height="122" key="GridCell.Tab.0.center" timestamp="1601908602871">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1322" height="122" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1601908602871" />
-    <state width="1322" height="122" key="GridCell.Tab.0.left" timestamp="1601908602871">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1322" height="122" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1601908602871" />
-    <state width="1322" height="122" key="GridCell.Tab.0.right" timestamp="1601908602871">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1322" height="122" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1601908602871" />
-    <state width="196" height="539" key="HiddenNamespacesPopup" timestamp="1600017032587">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="196" height="539" key="HiddenNamespacesPopup/0.0.1366.738@0.0.1366.738" timestamp="1600017032587" />
-    <state x="184" y="14" key="SettingsEditor" timestamp="1600702875854">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1600702875854" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1600033356219">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.738@0.0.1366.738" timestamp="1600033356219" />
-    <state x="474" y="182" width="418" height="369" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1600712133635">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="474" y="182" width="418" height="369" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.738@0.0.1366.738" timestamp="1600712133635" />
-    <state x="510" y="68" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1600713658828">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="510" y="68" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1600713658828" />
-    <state x="500" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600033465916">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="500" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1600033465916" />
-    <state x="0" y="0" width="583" height="738" key="find.popup" timestamp="1600033474226">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="0" y="0" width="583" height="738" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1600033474226" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1599956296781">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1599956296781" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1601642336428">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1601642336428" />
   </component>
 </project>
